@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 import './index.css';
 import { Halp } from "./components/Halp.js"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Halp />
+    <Router>
+       <Halp />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

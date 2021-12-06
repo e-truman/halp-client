@@ -1,7 +1,7 @@
 import React from "react"
 import { Route, Redirect } from "react-router-dom"
 import { ApplicationViews } from "./ApplicationViews"
-import { NavBar } from "./nav/NavBar"
+import { Navbar } from "./nav/Navbar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 
@@ -10,7 +10,7 @@ export const Halp = () => (
         <Route render={() => {
             if (localStorage.getItem("halp_user_id")) {
                 return <>
-                    <NavBar />
+                    <Navbar />
                     <ApplicationViews />
                 </>
             } else {

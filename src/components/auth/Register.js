@@ -11,7 +11,7 @@ export const Register = (props) => {
     const password = useRef()
     const bio = useRef()
     const date = Date.now()
-    const profileImage = useRef()
+    const profilePic = useRef()
     const verifyPassword = useRef()
     const passwordDialog = useRef()
     const history = useHistory()
@@ -26,10 +26,8 @@ export const Register = (props) => {
                 "email": email.current.value,
                 "username": username.current.value,
                 "password": password.current.value,
-                "bio": bio.current.value,
-                "profile_img_url": profileImage.current.value,
-                "created_on": HumanDate(date),
-                "active": true
+                "profilePic": profilePic.current.value,
+                "is_admin": true
             }
 
             return fetch("http://localhost:8000/register", {
@@ -43,7 +41,7 @@ export const Register = (props) => {
                 .then(res => res.json())
                 .then(res => {
                     if ("token" in res) {
-                        localStorage.setItem("rare_user_id", res.token)
+                        localStorage.setItem("halp_user_id", res.token)
                         history.push("/")
                     }
                 })
@@ -79,12 +77,8 @@ export const Register = (props) => {
                     <input ref={username} type="text" name="username" className="form-control" placeholder="username" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="bio"> Bio </label>
-                    <input ref={bio} type="text" name="bio" className="form-control" placeholder="bio" required />
-                </fieldset>
-                <fieldset>
                     <label htmlFor="profileImage"> Profile Picture </label>
-                    <input ref={profileImage} type="text" name="profileImage" className="form-control" placeholder="paste image url here" required />
+                    <input ref={profilePic} type="text" name="profilePic" className="form-control" placeholder="paste image url here" required />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="inputPassword"> Password </label>
