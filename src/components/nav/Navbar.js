@@ -27,7 +27,7 @@ export const Navbar = () => {
                     <li className="nav-item">
                         <button className="nav-link fakeLink"
                             onClick={() => {
-                                localStorage.removeItem("rare_user_id")
+                                localStorage.removeItem("halp_user_id")
                                 history.push({ pathname: "/" })
                             }}
                         >Logout</button>
