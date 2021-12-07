@@ -1,0 +1,40 @@
+
+
+.card{
+		align-items: center;
+		text-align: center;
+		word-wrap: break-word;
+        padding: 2em;
+        width: 25%;
+        height: 25%;
+	}
+
+
+	.img {
+		width: 6em;
+		height: 6em;
+		padding: .3em;
+	}
+
+	.technologies {
+		position: relative;
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
+
+	.card_container{
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+
+	.contact_type_cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		/* box-shadow: #757575bd 0 8px 6px -6px; */
+		padding: 10em;
+	}
