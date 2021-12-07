@@ -8,6 +8,9 @@ export const ApplicationViews = () => {
                 <Route exact path='/'>
                         <ContactTypeList />
                 </Route>
+                <Route exact path='/community_resources/:contactType'>
+                        <ContactTypeList />
+                </Route>
                 
 
 
@@ -15,3 +18,5 @@ export const ApplicationViews = () => {
     )
 
 }
+
+

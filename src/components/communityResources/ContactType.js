@@ -194,7 +194,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/GED/Education'>
             GED/Education
             </Link>
         </Typography>
@@ -213,7 +213,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Health Insurance'>
             Health Insurance
             </Link>
         </Typography>
@@ -232,7 +232,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Housing'>
             Housing
             </Link>
         </Typography>
@@ -251,7 +251,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Immigrant/Refugee'>
             Immigrant/Refugee
             </Link>
         </Typography>
@@ -270,7 +270,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Job Training'>
             Job Training
             </Link>
         </Typography>
@@ -289,7 +289,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Lawyers/Legal Assistance'>
             Lawyers/Legal Assistance
             </Link>
         </Typography>
@@ -308,7 +308,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Medical/Dental'>
             Medical/Dental
             </Link>
         </Typography>
@@ -327,7 +327,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to="/community_resources/Men's Resources">
             Men’s Resources
             </Link>
         </Typography>
@@ -346,7 +346,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Pet Resources'>
             Pet Resources
             </Link>
         </Typography>
@@ -365,7 +365,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Typography'>
             Phone
             </Link>
         </Typography>
@@ -384,7 +384,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Rehab (Drug and Alcohol)'>
             Rehab (Drug and Alcohol)
             </Link>
         </Typography>
@@ -403,7 +403,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Rent/Mortgage/Utility'>
             Rent/Mortgage/Utility
             </Link>
         </Typography>
@@ -422,7 +422,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Senior/Disabled Housing'>
             Senior/disabled housing
             </Link>
         </Typography>
@@ -441,7 +441,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Students'>
             Students
             </Link>
         </Typography>
@@ -460,7 +460,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Tax Prep'>
             Tax Prep
             </Link>
         </Typography>
@@ -479,7 +479,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Teen Services'>
             Teen Services
             </Link>
         </Typography>
@@ -498,7 +498,7 @@ export const ContactTypeList = (props) => {
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-            <Link to="#">
+            <Link to='/community_resources/Transportation Services'>
             Transportation Services
             </Link>
         </Typography>

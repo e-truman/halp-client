@@ -5,7 +5,7 @@
 		text-align: center;
 		word-wrap: break-word;
         padding: 2em;
-        width: 25%;
+        width: 15em;
         height: 25%;
 	}
 
@@ -36,5 +36,5 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		/* box-shadow: #757575bd 0 8px 6px -6px; */
-		padding: 10em;
+		padding: 5%;
 	}
