@@ -18,7 +18,7 @@ export const getCommunityResourceById = (id) => {
 
 
 export const getCommunityResourceByContactType = (type) => {
-    return fetch(`http://localhost:8000/community_resources/${type}`, {
+    return fetch(`http://localhost:8000/community_resources?contact_type=${type}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }
