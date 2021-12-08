@@ -34,35 +34,35 @@ export const CommunityResourceList = (props) => {
     return (
         <>
 
-            <h2 className="title">Community Resource Categories</h2>
+            <h2 className="title">Community Resource By Category</h2>
             <div className="contactTypes">
 
                 {
                     communityResources.map((communityResource) => {
                         return <>
                             <div className="space-between">
-<Card>
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        <Link to="/community_resources/Childcare">
-                                            {communityResource.contact}
-                                        </Link>
-                                    </Typography>
-                                </CardContent>
-                            </Card>
+                                <Card>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="div">
+                                            <Link to={`/community_resource/${communityResource.id}`}>
+                                                {communityResource.contact}
+                                            </Link>
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
 
-                    
-                    
 
-                        </div>
-                            </>
-                        }
-            )
 
+
+                            </div>
+                        </>
                     }
+                    )
 
-        </div>
+                }
 
-            </>
-        )
-    }
+            </div>
+
+        </>
+    )
+}
