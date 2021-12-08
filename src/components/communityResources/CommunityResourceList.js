@@ -51,9 +51,6 @@ export const CommunityResourceList = (props) => {
                                     </CardContent>
                                 </Card>
 
-
-
-
                             </div>
                         </>
                     }
