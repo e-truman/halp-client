@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, Link, useParams } from "react-router-dom"
 import { getCommunityResourceByContactType } from "./CommunityResourceManager";
+// import * as React from 'react';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 export const CommunityResourceList = (props) => {
     console.log(props)
@@ -9,23 +16,20 @@ export const CommunityResourceList = (props) => {
     const { contactType } = useParams()
     // const [showComments, setShowComments ] = useState(false)
 
-    const fetchCommunityResources = ()=>{
+    const fetchCommunityResources = () => {
         getCommunityResourceByContactType(contactType)
-        .then(data => setCommunityResources(data))
-    } 
+            .then(data => setCommunityResources(data))
+    }
 
     useEffect(() => {
         fetchCommunityResources()
 
     }, [])
 
-    // const toggleForm = () => {
-    //     if (showComments == true) {
-    //         setShowComments(false)
-    //     } else {
-    //         setShowComments(true)
-    //     }
-    // }
+
+
+
+
 
     return (
         <>
@@ -35,34 +39,30 @@ export const CommunityResourceList = (props) => {
 
                 {
                     communityResources.map((communityResource) => {
-                            return <>
-                                <div className="space-between">
-                                    <h4 className="mp-title" key={`post--${communityResource.id}`}><Link to={`/community_resource/${communityResource.contact}`}>Title: {communityResource.contact}</Link></h4>
-                                    
-                                    {/* <button onClick={() => history.push(`/commentForm/${post.id}`)}
-                                        className='comment-btn'>Add Comment</button>  */}
-                                    {/* { showComments ?
-                                        <button onClick={() => toggleForm()}>Hide Comments</button>
-                                        :
-                                        <button onClick={() => toggleForm()}>Show Comments</button>
-                                    }
-                                    { showComments ?
-                                        <ul>
-                                            <h3>{post.comment.subject}</h3>
-                                            <p>{post.comment.content}</p>
-                                        </ul>
-                                        : ""
-                                    } */}
-                        
-                                </div>
+                        return <>
+                            <div className="space-between">
+<Card>
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        <Link to="/community_resources/Childcare">
+                                            {communityResource.contact}
+                                        </Link>
+                                    </Typography>
+                                </CardContent>
+                            </Card>
+
+                    
+                    
+
+                        </div>
                             </>
                         }
-                    )
-                
-                }
+            )
 
-            </div>
+                    }
 
-        </>
-    )
-}
+        </div>
+
+            </>
+        )
+    }
