@@ -4,6 +4,7 @@ import { ContactTypeList } from "./communityResources/ContactType"
 import { CommunityResourceList } from "./communityResources/CommunityResourceList"
 import { CommunityResourceDetail } from "./communityResources/CommunityResourceDetail"
 import { ReviewList } from "./reviews/ReviewList"
+import { MyReviewList } from "./reviews/MyReviews" 
 
 export const ApplicationViews = () => {
     return (
@@ -17,8 +18,11 @@ export const ApplicationViews = () => {
                 <Route exact path='/community_resource/:contactId'>
                         <CommunityResourceDetail />
                 </Route>
-                <Route exact path='/reviews'>
+                <Route exact path='/reviews/:contactId'>
                         <ReviewList />
+                </Route>
+                <Route exact path='/my_reviews/:reviewerId'>
+                        <MyReviewList />
                 </Route>
 
 

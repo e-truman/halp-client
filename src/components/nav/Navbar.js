@@ -11,7 +11,10 @@ export const Navbar = () => {
                 <img className="navbar__logo" src={Logo} />
             </li> */}
             <li className="navbar__item">
-                <Link className="navbar__link" to="/reviews">Your Reviews</Link>
+                <Link className="navbar__link" to="/community_resources">Home</Link>
+            </li>
+            <li className="navbar__item">
+                <Link className="navbar__link" to="/my_reviews">Your Reviews</Link>
             </li>
             {/* <li className="navbar__item">
                 <Link className="navbar__link" to="/posts">Posts</Link>

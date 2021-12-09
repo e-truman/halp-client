@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, Link, useParams } from "react-router-dom"
-import { getReviewsByCommunityResource, deleteReview } from "./ReviewManager";
+import { getMyReviews, deleteReview } from "./ReviewManager";
 
-export const ReviewList = (props) => {
+export const MyReviewList = (props) => {
     console.log(props)
     const history = useHistory()
     const [reviews, setReviews] = useState([])
     // const [showComments, setShowComments ] = useState(false)
-   const { contactId } = useParams()
+   const { reviewerId } = useParams()
 
-    const fetchReviews = ()=>{
-        getReviewsByCommunityResource(contactId)
+   
+
+    const fetchMyReviews = ()=>{
+        getMyReviews(reviewerId)
         .then(data => setReviews(data))
     } 
 
 
-
     useEffect(() => {
-        fetchReviews()
+        fetchMyReviews()
 
     }, [])
-
 
     const handleDelete = (id, func) => {
         deleteReview(id, func)
@@ -65,7 +65,7 @@ export const ReviewList = (props) => {
                                     } */}
                                     <div className="buttons">
                                         {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
-                                        <button className="btn" value={review.id} onClick={() => { handleDelete(review.id, fetchReviews) }}>DELETE</button>
+                                        <button className="btn" value={review.id} onClick={() => { handleDelete(review.id, fetchMyReviews) }}>DELETE</button>
 
                                     </div>
                                 </div>
