@@ -7,7 +7,7 @@ export const getAllReviews = () => {
     .then(res => res.json())
 };
 
-export const getReviewsById = (id) => {
+export const getReviewById = (id) => {
     return fetch(`http://localhost:8000/reviews/${id}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
@@ -54,7 +54,7 @@ export const publishOrUnpublish = (reviewId) => {
         .then(getAllReviews)
 }
 
-export const createNewReview = (review) => {
+export const createReview = (review) => {
     return fetch(`http://localhost:8000/reviews`,{
         method: "review",
         headers:{

@@ -5,6 +5,7 @@ import { CommunityResourceList } from "./communityResources/CommunityResourceLis
 import { CommunityResourceDetail } from "./communityResources/CommunityResourceDetail"
 import { ReviewList } from "./reviews/ReviewList"
 import { MyReviewList } from "./reviews/MyReviews" 
+import { ReviewForm } from "./reviews/ReviewForm"
 
 export const ApplicationViews = () => {
     return (
@@ -23,6 +24,12 @@ export const ApplicationViews = () => {
                 </Route>
                 <Route exact path='/my_reviews/:reviewerId'>
                         <MyReviewList />
+                </Route>
+                <Route exact path='/write_review'>
+                        <ReviewForm />
+                </Route>
+                <Route exact path='/edit_review/:reviewId'>
+                        <ReviewForm />
                 </Route>
 
 

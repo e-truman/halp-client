@@ -16,9 +16,9 @@ export const Navbar = () => {
             <li className="navbar__item">
                 <Link className="navbar__link" to="/my_reviews">Your Reviews</Link>
             </li>
-            {/* <li className="navbar__item">
-                <Link className="navbar__link" to="/posts">Posts</Link>
-            </li> */}
+            <li className="navbar__item">
+                <Link className="navbar__link" to="/write_review">Write a Review</Link>
+            </li>
             {/* <li className="navbar__item">
                 <Link className="navbar__link" to="/tags">Tag Management</Link>
             </li> */}
