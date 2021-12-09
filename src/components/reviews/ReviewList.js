@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, Link } from "react-router-dom"
-import { getAllReviews, deleteReview} from "./ReviewManager";
+import { getReviewsByCommunityResource, deleteReview } from "./ReviewManager";
 
 export const ReviewList = (props) => {
     console.log(props)
@@ -9,7 +9,12 @@ export const ReviewList = (props) => {
     // const [showComments, setShowComments ] = useState(false)
 
     const fetchReviews = ()=>{
-        getAllReviews()
+        getReviewsByCommunityResource()
+        .then(data => setReviews(data))
+    } 
+
+    const fetchReviews = ()=>{
+        getMyReviews()
         .then(data => setReviews(data))
     } 
 
@@ -17,6 +22,15 @@ export const ReviewList = (props) => {
         fetchReviews()
 
     }, [])
+
+    useEffect(() => {
+        fetchMyReviews()
+
+    }, [])
+
+    const handleDelete = (id, func) => {
+        deleteReview(id, func)
+    }
 
     // const toggleForm = () => {
     //     if (showComments == true) {
@@ -37,10 +51,10 @@ export const ReviewList = (props) => {
                             return <>
                                 <div className="space-between">
                                     <h4 className="mp-title" key={`review--${review.id}`}><Link to={`/reviews/${review.id}`}>Title: {review.title}</Link></h4>
-                                    <p>Author: {review.author?.user?.first_name} {review.author?.user?.last_name}</p>
-                                    <p>Date: {review.publication_date}</p>
+                                    <p>Author: {review.reviewer?.user?.first_name} {review.reviewer?.user?.last_name}</p>
+                                    {/* <p>Date: {review.publication_date}</p> */}
                                     <p>{review.content}</p>
-                                    <p>Category: {review.category?.label}</p>
+                                    {/* <p>Category: {review.category?.label}</p> */}
                                     {/* <button onClick={() => history.push(`/commentForm/${review.id}`)}
                                         className='comment-btn'>Add Comment</button>  */}
                                     {/* { showComments ?
@@ -57,7 +71,7 @@ export const ReviewList = (props) => {
                                     } */}
                                     <div className="buttons">
                                         {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
-                                        <button className="btn" value={review.id} onClick={() => { deleteReview(review.id, fetchReviews) }}>DELETE</button>
+                                        <button className="btn" value={review.id} onClick={() => { handleDelete(review.id, fetchReviews) }}>DELETE</button>
 
                                     </div>
                                 </div>

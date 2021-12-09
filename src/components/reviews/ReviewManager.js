@@ -1,70 +1,79 @@
-export const getAllPosts = () => {
-    return fetch("http://localhost:8000/posts", {
+export const getAllReviews = () => {
+    return fetch("http://localhost:8000/reviews", {
         headers:{
-            "Authorization": `Token ${localStorage.getItem("rare_user_id")}`
+            "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }
     })
     .then(res => res.json())
 };
 
-export const getPostById = (id) => {
-    return fetch(`http://localhost:8000/posts/${id}`, {
+export const getReviewsById = (id) => {
+    return fetch(`http://localhost:8000/reviews/${id}`, {
         headers:{
-            "Authorization": `Token ${localStorage.getItem("rare_user_id")}`
+            "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }
     })
     .then(res => res.json())
 };
 
-export const deletePost = (postId, func) => {
-    fetch(`http://localhost:8000/posts/${postId}`, {
+export const deleteReview = (reviewId, func) => {
+    fetch(`http://localhost:8000/reviews/${reviewId}`, {
         method: "DELETE",
         headers:{
-            "Authorization": `Token ${localStorage.getItem("rare_user_id")}`
+            "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }
     })
         .then(func)
 }
 
-export const getMyPosts = (authorId) => {
-    return fetch(`http://localhost:8000/posts?author_id=${authorId}}`,{
+
+export const getReviewsByCommunityResource = (communityResourceId) => {
+    return fetch(`http://localhost:8000/reviews?community_resource=${communityResourceId}}`,{
         headers:{
-            "Authorization": `token ${localStorage.getItem("rare_user_id")}`
+            "Authorization": `token ${localStorage.getItem("halp_user_id")}`
         }})
     .then(res => res.json())
 }
 
-export const publishOrUnpublish = (postId) => {
-    return fetch(`http://localhost:8000/posts/${postId}/publish`, {
+export const getMyReviews = (reviewerId) => {
+    return fetch(`http://localhost:8000/reviews?reviewer_id=${reviewerId}}`,{
+        headers:{
+            "Authorization": `token ${localStorage.getItem("halp_user_id")}`
+        }})
+    .then(res => res.json())
+}
+
+export const publishOrUnpublish = (reviewId) => {
+    return fetch(`http://localhost:8000/reviews/${reviewId}/publish`, {
         method: "PUT",
         headers:{
-            "Authorization": `token ${localStorage.getItem("rare_user_id")}`,
+            "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
             "Content-Type" : "application/json"
         },
     })
-        .then(getAllPosts)
+        .then(getAllReviews)
 }
 
-export const createNewPost = (post) => {
-    return fetch(`http://localhost:8000/posts`,{
-        method: "POST",
+export const createNewReview = (review) => {
+    return fetch(`http://localhost:8000/reviews`,{
+        method: "review",
         headers:{
-            "Authorization": `token ${localStorage.getItem("rare_user_id")}`,
+            "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(post)
+        body: JSON.stringify(review)
     })
     .then(res => res.json())
 }
 
-export const updatePost = (post) => {
-    return fetch(`http://localhost:8000/posts/${post.id}`,{
+export const updateReview = (review) => {
+    return fetch(`http://localhost:8000/reviews/${review.id}`,{
         method: "PUT",
         headers:{
-            "Authorization": `token ${localStorage.getItem("rare_user_id")}`,
+            "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(post)
+        body: JSON.stringify(review)
     })
     .then(res => res.json())
 }

@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { ContactTypeList } from "./communityResources/ContactType"
 import { CommunityResourceList } from "./communityResources/CommunityResourceList"
 import { CommunityResourceDetail } from "./communityResources/CommunityResourceDetail"
+import { ReviewList } from "./reviews/ReviewList"
 
 export const ApplicationViews = () => {
     return (
