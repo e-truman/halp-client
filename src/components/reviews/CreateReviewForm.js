@@ -7,14 +7,14 @@ import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
+import { getCommunityResourceById } from "../communityResources/CommunityResourceManager";
 
 
-export const EditReviewForm = () => {
-    const [categories, setCategories] = useState([])
+export const CreateReviewForm = () => {
+    const [communityResource, setCommunityResource] = useState([])
     const { contactId } = useParams()
     const [review, setReview] = useState({})
     const history = useHistory()
-    const editMode = reviewId ? true : false  // true or false
     const [value, setValue] = React.useState(2);
     const [hover, setHover] = React.useState(-1);
     const labels = {
@@ -31,29 +31,15 @@ export const EditReviewForm = () => {
     };
 
 
+    const fetchCommunityResources = () => {
+        getCommunityResourceById(contactId)
+            .then(data => setCommunityResource(data))
+    }
 
     useEffect(() => {
-        if (editMode) {
-            getReviewById(parseInt(reviewId)).then((res) => {
-                setReview({
-                    id: res.id,
-                    reviewer: res.reviewer,
-                    communityResource: res.community_resource,
-                    title: res.title,
-                    content: res.community_resource,
-                    rating: res.rating,
-                    isPublished: res.is_published,
-                    approved: res.approved
+        fetchCommunityResources()
 
-                })
-            })
-        }
-
-
-
-        // getGameTypes().then(gameTypesData => setGameTypes(gameTypesData))
     }, [])
-
 
     const handleControlledInputChange = (event) => {
         const newReviewState = Object.assign({}, review)          // Create copy
@@ -63,47 +49,25 @@ export const EditReviewForm = () => {
     }
 
     const constructNewReview = () => {
-        // debugger
-        if (editMode) {
-            // PUT: 
-            updateReview({
-
-
-                id: review.id,
-                reviewer: review.reviewer,
-                communityResource: review.community_resource,
-                title: review.title,
-                content: review.content,
-                rating: review.rating,
-                isPublished: review.is_published,
-                approved: review.approved
-            })
-                .then(() => history.push("/games"))
-        } else {
-            // POST
             createReview({
                 reviewer: parseInt(localStorage.getItem("halp_user_id")),
-                communityResource: review.community_resource,
+                communityResourceId: parseInt(communityResource.id),
                 title: review.title,
                 content: review.content,
                 rating: review.rating,
                 isPublished: true,
                 approved: true
             })
-                .then(() => history.push("/games"))
-        }
+                .then(() => history.push("/reviews/:contactId"))
+        
     }
 
     return (
         <form className="gameForm">
-            <h2 className="gameForm__title">{editMode ? "Edit Review" : "Write a Review"}</h2>
+            <h2 className="gameForm__title">Write a Review</h2>
 
 
-            <h3>{review.communityResource} </h3>
-
-
-
-
+            <h3>{communityResource.community_resource} </h3>
 
 
             <Box
@@ -114,7 +78,7 @@ export const EditReviewForm = () => {
                 }}
             >
                 <Rating
-                    name="hover-feedback"
+                    name={review.rating}
                     value={review.rating}
                     precision={0.5}
                     onChange={(event, newValue) => {
@@ -162,7 +126,7 @@ export const EditReviewForm = () => {
                     evt.preventDefault()
                     constructNewReview()
                 }}
-                className="btn btn-primary">{editMode ? "Save Updates" : "Create"}</button>
+                className="btn btn-primary">SUBMIT</button>
         </form>
     )
 }

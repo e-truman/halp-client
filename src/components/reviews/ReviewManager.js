@@ -56,7 +56,7 @@ export const publishOrUnpublish = (reviewId) => {
 
 export const createReview = (review) => {
     return fetch(`http://localhost:8000/reviews`,{
-        method: "review",
+        method: "POST",
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
             "Content-Type": "application/json"

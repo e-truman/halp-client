@@ -44,11 +44,17 @@ export const CommunityResourceList = (props) => {
                                 <Card>
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
-                                            <Link to={`/community_resource/${communityResource.id}`}>
-                                                {communityResource.contact}
-                                            </Link>
+                                            
+                                                <h3>{communityResource.contact}</h3 >
+                                                <p>{communityResource.phone_number}</p>
+                                                <p>{communityResource.street_address}</p>
+                                    
                                         </Typography>
                                     </CardContent>
+                                    <CardActions>
+        <Button size="small"><Link to={`reviews/${communityResource.id}`}>See Reviews</Link></Button>
+        <Button size="small"><Link to={`/write_review/${communityResource.id}`}>Wite a Review</Link></Button>
+      </CardActions>
                                 </Card>
 
                             </div>
