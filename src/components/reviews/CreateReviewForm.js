@@ -50,15 +50,15 @@ export const CreateReviewForm = () => {
 
     const constructNewReview = () => {
             createReview({
-                reviewer: parseInt(localStorage.getItem("halp_user_id")),
+                reviewer: localStorage.getItem("halp_user_id"),   // a token is in my local storage rather than an integer
                 communityResourceId: parseInt(communityResource.id),
                 title: review.title,
                 content: review.content,
-                rating: review.rating,
+                rating: value,
                 isPublished: true,
                 approved: true
             })
-                .then(() => history.push("/reviews/:contactId"))
+                .then(() => history.push(`/community_resources`))
         
     }
 
@@ -78,13 +78,13 @@ export const CreateReviewForm = () => {
                 }}
             >
                 <Rating
-                    name={review.rating}
+                    name='rating'
                     value={review.rating}
                     precision={0.5}
-                    onChange={(event, newValue) => {
+                    onChange={(handleControlledInputChange, newValue) => {
                         setValue(newValue);
                     }}
-                    onChangeActive={(event, newHover) => {
+                    onChangeActive={(handleControlledInputChange, newHover) => {
                         setHover(newHover);
                     }}
                     emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
@@ -112,7 +112,7 @@ export const CreateReviewForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="title">Review: </label>
-                    <input type="text" name="title" required autoFocus className="form-control"
+                    <input type="text" name="content" required autoFocus className="form-control"
                         value={review.content}
                         // defaultValue={game.title}
                         onChange={handleControlledInputChange}
