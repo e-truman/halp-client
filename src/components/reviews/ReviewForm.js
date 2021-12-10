@@ -7,11 +7,12 @@ import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
+import { getCommunityResourceById } from "../communityResources/CommunityResourceManager";
 
 
-export const EditReviewForm = () => {
-    const [categories, setCategories] = useState([])
-    const { contactId } = useParams()
+export const ReviewForm = () => {
+    const [communityResource, setCommunityResource] = useState({})
+    const { contactId, reviewId } = useParams()
     const [review, setReview] = useState({})
     const history = useHistory()
     const editMode = reviewId ? true : false  // true or false
@@ -30,7 +31,15 @@ export const EditReviewForm = () => {
         5: 'Excellent+',
     };
 
+    const fetchCommunityResources = () => {
+        getCommunityResourceById(contactId)
+            .then(data => setCommunityResource(data))
+    }
 
+    // useEffect(() => {
+    //     fetchCommunityResources()
+
+    // }, [])
 
     useEffect(() => {
         if (editMode) {
@@ -46,9 +55,13 @@ export const EditReviewForm = () => {
                     approved: res.approved
 
                 })
-            })
+            }
+            )
         }
+    else {
+        fetchCommunityResources()
 
+    }
 
 
         // getGameTypes().then(gameTypesData => setGameTypes(gameTypesData))
@@ -78,19 +91,19 @@ export const EditReviewForm = () => {
                 isPublished: review.is_published,
                 approved: review.approved
             })
-                .then(() => history.push("/games"))
+                .then(() => history.push(`/community_resources`))
         } else {
             // POST
             createReview({
-                reviewer: parseInt(localStorage.getItem("halp_user_id")),
-                communityResource: review.community_resource,
+                reviewer: localStorage.getItem("halp_user_id"),   // a token is in my local storage rather than an integer
+                communityResourceId: parseInt(communityResource.id),
                 title: review.title,
                 content: review.content,
-                rating: review.rating,
+                rating: value,
                 isPublished: true,
                 approved: true
             })
-                .then(() => history.push("/games"))
+                .then(() => history.push(`/community_resources`))
         }
     }
 
@@ -99,7 +112,7 @@ export const EditReviewForm = () => {
             <h2 className="gameForm__title">{editMode ? "Edit Review" : "Write a Review"}</h2>
 
 
-            <h3>{review.communityResource} </h3>
+            <h3> {editMode ? `${review.communityResource}` : `${communityResource.community_resource}`}</h3>
 
 
 
@@ -114,13 +127,13 @@ export const EditReviewForm = () => {
                 }}
             >
                 <Rating
-                    name="hover-feedback"
+                    name='rating'
                     value={review.rating}
                     precision={0.5}
-                    onChange={(event, newValue) => {
+                    onChange={(handleControlledInputChange, newValue) => {
                         setValue(newValue);
                     }}
-                    onChangeActive={(event, newHover) => {
+                    onChangeActive={(handleControlledInputChange, newHover) => {
                         setHover(newHover);
                     }}
                     emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
@@ -148,7 +161,7 @@ export const EditReviewForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="title">Review: </label>
-                    <input type="text" name="title" required autoFocus className="form-control"
+                    <input type="text" name="content" required autoFocus className="form-control"
                         value={review.content}
                         // defaultValue={game.title}
                         onChange={handleControlledInputChange}

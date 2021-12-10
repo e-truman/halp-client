@@ -7,6 +7,7 @@ import { ReviewList } from "./reviews/ReviewList"
 import { MyReviewList } from "./reviews/MyReviews" 
 import { CreateReviewForm } from "./reviews/CreateReviewForm"
 import { EditReviewForm } from "./reviews/EditReviewForm"
+import { ReviewForm } from "./reviews/ReviewForm"
 
 export const ApplicationViews = () => {
     return (
@@ -24,13 +25,13 @@ export const ApplicationViews = () => {
                         <ReviewList />
                 </Route>
                 <Route exact path='/my_reviews/:reviewerId'>
-                        <MyReviewList />
+                        <ReviewList />
                 </Route>
                 <Route exact path='/write_review/:contactId'>
-                        <CreateReviewForm />
+                        <ReviewForm />
                 </Route>
-                <Route exact path='/edit_review/:editReviewId'>
-                        <EditReviewForm />
+                <Route exact path='/edit_review/:reviewId'>
+                        <ReviewForm />
                 </Route>
 
 
