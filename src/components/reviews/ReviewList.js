@@ -47,7 +47,7 @@ export const ReviewList = (props) => {
     const buttons = (id) => {
         if (myReviewsMode) {
             return <div>
-                <button className="btn" onClick={() =>  history.push("/edit_review/id") }>EDIT</button>
+                <button className="btn" onClick={() =>  history.push(`/edit_review/${id}`) }>EDIT</button>
                 <button className="btn" value={id} onClick={() => { handleDelete(id, fetchReviews) }}>DELETE</button>
             </div>
         }

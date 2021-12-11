@@ -10,9 +10,17 @@ import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
 
 
 export const EditReviewForm = () => {
-    const [categories, setCategories] = useState([])
     const { reviewId } = useParams()
-    const [review, setReview] = useState({})
+    const [review, setReview] = useState({
+                    id: 0,
+                    reviewer: "",
+                    communityResourceId: 0,
+                    title: "",
+                    content: "",
+                    rating: 0,
+                    isPublished: false,
+                    approved: false
+    })
     const history = useHistory()
     const editMode = reviewId ? true : false  // true or false
     const [value, setValue] = React.useState(2);
@@ -99,11 +107,7 @@ export const EditReviewForm = () => {
             <h2 className="gameForm__title">{editMode ? "Edit Review" : "Write a Review"}</h2>
 
 
-            <h3>{review.communityResource} </h3>
-
-
-
-
+            <h3>{review.communityResourceId} </h3>
 
 
             <Box

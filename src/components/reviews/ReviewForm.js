@@ -47,9 +47,9 @@ export const ReviewForm = () => {
                 setReview({
                     id: res.id,
                     reviewer: res.reviewer,
-                    communityResource: res.community_resource,
+                    communityResourceId: res.community_resource.id,
                     title: res.title,
-                    content: res.community_resource,
+                    content: res.content,
                     rating: res.rating,
                     isPublished: res.is_published,
                     approved: res.approved
@@ -84,10 +84,10 @@ export const ReviewForm = () => {
 
                 id: review.id,
                 reviewer: review.reviewer,
-                communityResource: review.community_resource,
+                communityResourceId: review?.community_resource?.id,
                 title: review.title,
                 content: review.content,
-                rating: review.rating,
+                rating: value,
                 isPublished: review.is_published,
                 approved: review.approved
             })
@@ -112,10 +112,18 @@ export const ReviewForm = () => {
             <h2 className="gameForm__title">{editMode ? "Edit Review" : "Write a Review"}</h2>
 
 
-            <h3> {editMode ? `${review.communityResource}` : `${communityResource.community_resource}`}</h3>
+            <h3> {editMode ? `${review?.communityResourceId?.contact}` : `${communityResource.contact}`}</h3>
 
 
-
+            {/* <option value="0">Select a Game</option>
+                        {
+                            games?.map(g => (
+                                g.id == event.gameId ? <option selected key={g.id} value={g.id}>
+                                    {g.title}
+                                </option> :
+                                <option key={g.id} value={g.id}>
+                                    {g.title}
+                                </option> */}
 
 
 
@@ -160,8 +168,8 @@ export const ReviewForm = () => {
 
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="title">Review: </label>
-                    <input type="text" name="content" required autoFocus className="form-control"
+                    <label htmlFor="content">Review: </label>
+                    <input type="textarea" name="content" required className="form-control"
                         value={review.content}
                         // defaultValue={game.title}
                         onChange={handleControlledInputChange}
