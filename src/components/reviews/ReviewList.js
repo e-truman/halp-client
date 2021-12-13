@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, Link, useParams } from "react-router-dom"
 import { getReviewsByCommunityResource, getMyReviews, deleteReview } from "./ReviewManager";
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
+import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 
 export const ReviewList = (props) => {
     console.log(props)
