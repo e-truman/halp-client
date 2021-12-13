@@ -12,7 +12,7 @@ import { getCommunityResourceById } from "../communityResources/CommunityResourc
 
 export const ReviewForm = () => {
     const [communityResource, setCommunityResource] = useState({})
-    const { contactId, reviewId } = useParams()
+    const { contactId, reviewId, reviewerId } = useParams()
     const [review, setReview] = useState({})
     const history = useHistory()
     const editMode = reviewId ? true : false  // true or false
@@ -44,13 +44,15 @@ export const ReviewForm = () => {
     useEffect(() => {
         if (editMode) {
             getReviewById(parseInt(reviewId)).then((res) => {
+                // debugger
                 setReview({
                     id: res.id,
                     reviewer: res.reviewer,
-                    communityResourceId: res.community_resource.id,
+                    communityResource: res.community_resource,
                     title: res.title,
                     content: res.content,
                     rating: res.rating,
+                    createdOn: res.created_on,
                     isPublished: res.is_published,
                     approved: res.approved
 
@@ -76,7 +78,7 @@ export const ReviewForm = () => {
     }
 
     const constructNewReview = () => {
-        // debugger
+       
         if (editMode) {
             // PUT: 
             updateReview({
@@ -84,26 +86,27 @@ export const ReviewForm = () => {
 
                 id: review.id,
                 reviewer: review.reviewer,
-                communityResourceId: review?.community_resource?.id,
+                communityResourceId: review?.communityResource.id,
                 title: review.title,
                 content: review.content,
                 rating: value,
-                isPublished: review.is_published,
+                isPublished: review.isPublished,
+                createdOn: review.createdOn,
                 approved: review.approved
             })
-                .then(() => history.push(`/community_resources`))
+                .then(() => history.push("/community_resources"))
         } else {
             // POST
             createReview({
                 reviewer: localStorage.getItem("halp_user_id"),   // a token is in my local storage rather than an integer
-                communityResourceId: parseInt(communityResource.id),
+                communityResourceId: communityResource.id,
                 title: review.title,
                 content: review.content,
                 rating: value,
                 isPublished: true,
                 approved: true
             })
-                .then(() => history.push(`/community_resources`))
+                .then(() => history.push(`/reviews/${contactId}`))
         }
     }
 
@@ -112,7 +115,7 @@ export const ReviewForm = () => {
             <h2 className="gameForm__title">{editMode ? "Edit Review" : "Write a Review"}</h2>
 
 
-            <h3> {editMode ? `${review?.communityResourceId?.contact}` : `${communityResource.contact}`}</h3>
+            <h3> {editMode ? `${review?.communityResource?.contact}` : `${communityResource.contact}`}</h3>
 
 
             {/* <option value="0">Select a Game</option>
