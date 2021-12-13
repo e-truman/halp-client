@@ -13,7 +13,9 @@ import { getCommunityResourceById } from "../communityResources/CommunityResourc
 export const ReviewForm = () => {
     const [communityResource, setCommunityResource] = useState({})
     const { contactId, reviewId, reviewerId } = useParams()
-    const [review, setReview] = useState({})
+    const [review, setReview] = useState({
+        rating:0
+    })
     const history = useHistory()
     const editMode = reviewId ? true : false  // true or false
     const [value, setValue] = React.useState(2);
@@ -82,19 +84,17 @@ export const ReviewForm = () => {
         if (editMode) {
             // PUT: 
             updateReview({
-
-
                 id: review.id,
                 reviewer: review.reviewer,
                 communityResourceId: review?.communityResource.id,
                 title: review.title,
                 content: review.content,
-                rating: value,
+                rating: review.rating,
                 isPublished: review.isPublished,
                 createdOn: review.createdOn,
                 approved: review.approved
             })
-                .then(() => history.push("/community_resources"))
+                .then(() => history.push('/community_resources'))
         } else {
             // POST
             createReview({
@@ -102,11 +102,11 @@ export const ReviewForm = () => {
                 communityResourceId: communityResource.id,
                 title: review.title,
                 content: review.content,
-                rating: value,
+                rating: review.rating,
                 isPublished: true,
                 approved: true
             })
-                .then(() => history.push(`/reviews/${contactId}`))
+                .then(() => history.push('/community_resources'))
         }
     }
 
@@ -137,14 +137,13 @@ export const ReviewForm = () => {
                     alignItems: 'center',
                 }}
             >
+                
                 <Rating
                     name='rating'
                     value={review.rating}
                     precision={0.5}
-                    onChange={(handleControlledInputChange, newValue) => {
-                        setValue(newValue);
-                    }}
-                    onChangeActive={(handleControlledInputChange, newHover) => {
+                    onChange={handleControlledInputChange} 
+                    onChangeActive={(event, newHover) => {
                         setHover(newHover);
                     }}
                     emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
@@ -161,7 +160,6 @@ export const ReviewForm = () => {
                     <label htmlFor="title">Title: </label>
                     <input type="text" name="title" required autoFocus className="form-control"
                         value={review.title}
-                        // defaultValue={game.title}
                         onChange={handleControlledInputChange}
                     />
                 </div>

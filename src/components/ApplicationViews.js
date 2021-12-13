@@ -18,19 +18,19 @@ export const ApplicationViews = () => {
                 <Route exact path='/community_resources/:contactType'>
                         <CommunityResourceList />
                 </Route>
-                <Route exact path='/community_resource/:contactId'>
+                <Route exact path='/community_resource/:contactId(\d+)'>
                         <CommunityResourceDetail />
                 </Route>
-                <Route exact path='/reviews/:contactId'>
+                <Route exact path='/reviews/:contactId(\d+)'>
                         <ReviewList />
                 </Route>
                 <Route exact path='/my_reviews/:reviewerId'>
                         <ReviewList />
                 </Route>
-                <Route exact path='/write_review/:contactId'>
+                <Route exact path='/write_review/:contactId(\d+)'>
                         <ReviewForm />
                 </Route>
-                <Route exact path='/edit_review/:reviewId'>
+                <Route exact path='/edit_review/:reviewId(\d+)'>
                         <ReviewForm />
                 </Route>
 

@@ -55,7 +55,6 @@ export const publishOrUnpublish = (reviewId) => {
 }
 
 export const createReview = (review) => {
-    debugger
     return fetch(`http://localhost:8000/reviews`,{
         method: "POST",
         headers:{
@@ -76,5 +75,4 @@ export const updateReview = (review) => {
         },
         body: JSON.stringify(review)
     })
-    .then(res => res.json())
 }
