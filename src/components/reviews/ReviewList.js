@@ -6,6 +6,28 @@ import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+// import Typography from '@mui/material/Typography';
+
+
+// import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+
 export const ReviewList = (props) => {
     console.log(props)
     const history = useHistory()
@@ -13,6 +35,8 @@ export const ReviewList = (props) => {
     // const [showComments, setShowComments ] = useState(false)
     const { contactId, reviewerId } = useParams()
     const myReviewsMode = reviewerId ? true : false
+    const [expanded, setExpanded] = React.useState(false);
+    const [value, setValue] = React.useState(2);
 
 
 
@@ -51,66 +75,125 @@ export const ReviewList = (props) => {
     const buttons = (id) => {
         if (myReviewsMode) {
             return <div>
-                <button className="btn" onClick={() =>  history.push(`/edit_review/${id}`) }>EDIT</button>
+                <button className="btn" onClick={() => history.push(`/edit_review/${id}`)}>EDIT</button>
                 <button className="btn" value={id} onClick={() => { handleDelete(id, fetchReviews) }}>DELETE</button>
             </div>
         }
     }
 
+    const ExpandMore = styled((props) => {
+        const { expand, ...other } = props;
+        return <IconButton {...other} />;
+    })(({ theme, expand }) => ({
+        transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+        marginLeft: 'auto',
+        transition: theme.transitions.create('transform', {
+            duration: theme.transitions.duration.shortest,
+        }),
+    }));
+
+    // export default function RecipeReviewCard() {
+    //     const [expanded, setExpanded] = React.useState(false);
+
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
+
+
+    // const toggleForm = () => {
+    //     if (showComments == true) {
+    //         setShowComments(false)
+    //     } else {
+    //         setShowComments(true)
+    //     }
+    // }
+
+    return (
+        <>
+
+            <h2 className="title">{myReviewsMode ? "Your Reviews" : "All Reviews"}</h2>
+            <div className="allReviews">
+
+                {
+                    reviews.map((review) => {
+                        return <>
 
 
 
-// const toggleForm = () => {
-//     if (showComments == true) {
-//         setShowComments(false)
-//     } else {
-//         setShowComments(true)
-//     }
-// }
 
-return (
-    <>
-
-        <h2 className="title">{myReviewsMode ? "Your Reviews" : "All Reviews"}</h2>
-        <div className="allReviews">
-
-            {
-                reviews.map((review) => {
-                    return <>
-                        <div className="space-between">
-                            <h4 className="mp-title" key={`review--${review.id}`}><Link to={`/reviews/${review.id}`}>Title: {review.title}</Link></h4>
-                            <p>Author: {review.reviewer?.user?.first_name} {review.reviewer?.user?.last_name}</p>
-                            {/* <p>Date: {review.publication_date}</p> */}
-                            <p>{review.content}</p>
-                            {/* <p>Category: {review.category?.label}</p> */}
-                            {/* <button onClick={() => history.push(`/commentForm/${review.id}`)}
-                                        className='comment-btn'>Add Comment</button>  */}
-                            {/* { showComments ?
-                                        <button onClick={() => toggleForm()}>Hide Comments</button>
-                                        :
-                                        <button onClick={() => toggleForm()}>Show Comments</button>
+                            <Card sx={{ maxWidth: 345 }}>
+                                <CardHeader
+                                    avatar={
+                                        <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                                          {review?.reviewer?.first_name} {review?.reviewer?.last_name}
+                                        </Avatar>
                                     }
-                                    { showComments ?
-                                        <ul>
-                                            <h3>{review.comment.subject}</h3>
-                                            <p>{review.comment.content}</p>
-                                        </ul>
-                                        : ""
-                                    } */}
+                                    // action={
+                                    //     <IconButton aria-label="settings">
+                                    //         <MoreVertIcon />
+                                    //     </IconButton>
+                                    // }
+                                    title={review?.community_resource?.contact}
+                                    // subheader="September 14, 2016"
+                                />
+
+
+                                <CardContent>
+                                    <Typography variant="body2" color="text.secondary">
+                                        {review.title}
+                                    </Typography>
+
+
+                                    <Box
+                                    sx={{
+                                        '& > legend': { mt: 2 },
+                                    }}
+                                >
+                                   
+                                    <Rating name="read-only" value={review.rating} readOnly />
+                                 
+                                </Box>
 
 
 
-                            {myReviewsMode ? buttons(review.id) : ""}
+                                </CardContent>
+                                <CardActions disableSpacing>
+                                    <IconButton aria-label="add to favorites">
+                                        <FavoriteIcon />
+                                    </IconButton>
+                                    <IconButton aria-label="share">
+                                        <ShareIcon />
+                                    </IconButton>
+                                    {myReviewsMode ? buttons(review.id) : ""}
+                                    <ExpandMore
+                                        expand={expanded}
+                                        onClick={handleExpandClick}
+                                        aria-expanded={expanded}
+                                        aria-label="show more"
+                                    >
+                                        <ExpandMoreIcon />
+                                    </ExpandMore>
+                                </CardActions>
+                                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                                    <CardContent>
+                                        <Typography paragraph>Method:</Typography>
+                                        <Typography paragraph>
+                                           {review.content}
+                                        </Typography>
+                                        
+                                    </CardContent>
+                                </Collapse>
+                            </Card>
 
-                        </div>
-                    </>
+
+                        </>
+                    }
+                    )
+
                 }
-                )
 
-            }
+            </div>
 
-        </div>
-
-    </>
-)
+        </>
+    )
 }
