@@ -81,22 +81,23 @@ export const updateReview = (review) => {
 
 
 export const UnlikeReview = reviewId => {
-    return fetch(`http://localhost:8000/reviews/${ reviewId}/signup`, {
+    return fetch(`http://localhost:8000/reviews/${ reviewId}/react`, {
         method: "DELETE",
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`
         }
     })
-        .then(getEvents)
+        .then(getReviewsByCommunityResource)
 }
 
 export const LikeReview = reviewId => {
-    return fetch(`http://localhost:8000/reviews/${ reviewId }/signup`, {
+    return fetch(`http://localhost:8000/reviews/${ reviewId }/react`, {
         method: "POST",
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`
         }
     })
         .then(response => response.json())
-        .then(getEvents)
+        .then(getReviewsByCommunityResource)
 }
+
