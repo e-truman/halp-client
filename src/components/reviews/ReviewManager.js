@@ -28,15 +28,15 @@ export const deleteReview = (reviewId, func) => {
 
 
 export const getReviewsByCommunityResource = (communityResourceId) => {
-    return fetch(`http://localhost:8000/reviews?community_resource=${communityResourceId}}`,{
+    return fetch(`http://localhost:8000/reviews?community_resource=${communityResourceId}`,{
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`
         }})
     .then(res => res.json())
 }
 
-export const getMyReviews = (reviewerId) => {
-    return fetch(`http://localhost:8000/reviews?reviewer_id=${reviewerId}}`,{
+export const getMyReviews = () => {
+    return fetch(`http://localhost:8000/reviews?reviewer=true`,{
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`
         }})
@@ -80,24 +80,31 @@ export const updateReview = (review) => {
 
 
 
-export const UnlikeReview = reviewId => {
-    return fetch(`http://localhost:8000/reviews/${ reviewId}/react`, {
-        method: "DELETE",
-        headers:{
-            "Authorization": `token ${localStorage.getItem("halp_user_id")}`
-        }
-    })
-        .then(getReviewsByCommunityResource)
-}
-
-export const LikeReview = reviewId => {
+export const UnlikeReview = (reviewId, reaction) => {
     return fetch(`http://localhost:8000/reviews/${ reviewId }/react`, {
         method: "POST",
         headers:{
-            "Authorization": `token ${localStorage.getItem("halp_user_id")}`
-        }
+            "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({reactions:reaction})
     })
         .then(response => response.json())
-        .then(getReviewsByCommunityResource)
+}
+
+
+
+
+export const LikeReview = (reviewId, reaction) => {
+    return fetch(`http://localhost:8000/reviews/${ reviewId }/react`, {
+        method: "POST",
+        headers:{
+            "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({reactions:reaction})
+    })
+        .then(response => response.json())
+        
 }
 

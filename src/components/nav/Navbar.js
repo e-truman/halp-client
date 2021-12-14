@@ -14,7 +14,7 @@ export const Navbar = () => {
                 <Link className="navbar__link" to="/community_resources">Home</Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/my_reviews/:reviewerId">Your Reviews</Link>
+                <Link className="navbar__link" to={`/my_reviews`}>Your Reviews</Link>
             </li>
             <li className="navbar__item">
                 <Link className="navbar__link" to="/write_review">Write a Review</Link>

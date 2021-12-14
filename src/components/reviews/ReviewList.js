@@ -6,6 +6,7 @@ import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
@@ -168,19 +169,19 @@ export const ReviewList = (props) => {
 
 
                                     {
-                                        review.is_liked
+                                        review.reactions && review.reactions[0]?.is_liked
                                             ? <button className="btn btn-3"
-                                                onClick={() => UnlikeReview(review.id).then(() => fetchReviews())}
+                                                onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}
                                             >
                                                 <IconButton aria-label="add to favorites">
                                                     <FavoriteIcon />
                                                 </IconButton>
                                             </button>
                                             : <button className="btn btn-2"
-                                                onClick={() => LikeReview(review.id).then(() => fetchReviews())}
+                                                onClick={() => LikeReview(review.id, true).then(() => fetchReviews())}
                                             >
                                                 <IconButton aria-label="add to favorites">
-                                                    <FavoriteIcon />
+                                                    <FavoriteBorderIcon />
                                                 </IconButton>
                                             </button>
                                     }
