@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, Link, useParams } from "react-router-dom"
-import { getReviewsByCommunityResource, getMyReviews, deleteReview } from "./ReviewManager";
+import { getReviewsByCommunityResource, getMyReviews, deleteReview, LikeReview, UnlikeReview } from "./ReviewManager";
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
@@ -76,7 +77,7 @@ export const ReviewList = (props) => {
         if (myReviewsMode) {
             return <div>
                 <button className="btn" onClick={() => history.push(`/edit_review/${id}`)}>EDIT</button>
-                <button className="btn" value={id} onClick={() => { handleDelete(id, fetchReviews) }}>DELETE</button>
+                <button className="btn" value={id} onClick={() => { handleDelete(id, fetchReviews) }}><DeleteIcon /></button>
             </div>
         }
     }
@@ -108,6 +109,10 @@ export const ReviewList = (props) => {
     //     }
     // }
 
+
+
+    
+
     return (
         <>
 
@@ -125,7 +130,7 @@ export const ReviewList = (props) => {
                                 <CardHeader
                                     avatar={
                                         <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                          {review?.reviewer?.first_name} {review?.reviewer?.last_name}
+                                            {review?.reviewer?.user?.first_name}
                                         </Avatar>
                                     }
                                     // action={
@@ -134,7 +139,7 @@ export const ReviewList = (props) => {
                                     //     </IconButton>
                                     // }
                                     title={review?.community_resource?.contact}
-                                    // subheader="September 14, 2016"
+                                // subheader="September 14, 2016"
                                 />
 
 
@@ -145,22 +150,45 @@ export const ReviewList = (props) => {
 
 
                                     <Box
-                                    sx={{
-                                        '& > legend': { mt: 2 },
-                                    }}
-                                >
-                                   
-                                    <Rating name="read-only" value={review.rating} readOnly />
-                                 
-                                </Box>
+                                        sx={{
+                                            '& > legend': { mt: 2 },
+                                        }}
+                                    >
+
+                                        <Rating name="read-only" value={review.rating} readOnly />
+
+                                    </Box>
 
 
 
                                 </CardContent>
                                 <CardActions disableSpacing>
-                                    <IconButton aria-label="add to favorites">
-                                        <FavoriteIcon />
-                                    </IconButton>
+
+
+
+
+                                    {
+                                        review.is_liked
+                                            ? <button className="btn btn-3"
+                                                onClick={() => UnlikeReview(review.id).then(() => fetchReviews())}
+                                            >
+                                                <IconButton aria-label="add to favorites">
+                                                    <FavoriteIcon />
+                                                </IconButton>
+                                            </button>
+                                            : <button className="btn btn-2"
+                                                onClick={() => LikeReview(review.id).then(() => fetchReviews())}
+                                            >
+                                                <IconButton aria-label="add to favorites">
+                                                    <FavoriteIcon />
+                                                </IconButton>
+                                            </button>
+                                    }
+
+
+
+
+
                                     <IconButton aria-label="share">
                                         <ShareIcon />
                                     </IconButton>
@@ -178,9 +206,9 @@ export const ReviewList = (props) => {
                                     <CardContent>
                                         <Typography paragraph>Method:</Typography>
                                         <Typography paragraph>
-                                           {review.content}
+                                            {review.content}
                                         </Typography>
-                                        
+
                                     </CardContent>
                                 </Collapse>
                             </Card>

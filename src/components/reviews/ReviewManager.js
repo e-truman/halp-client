@@ -76,3 +76,27 @@ export const updateReview = (review) => {
         body: JSON.stringify(review)
     })
 }
+
+
+
+
+export const UnlikeReview = reviewId => {
+    return fetch(`http://localhost:8000/reviews/${ reviewId}/signup`, {
+        method: "DELETE",
+        headers:{
+            "Authorization": `token ${localStorage.getItem("halp_user_id")}`
+        }
+    })
+        .then(getEvents)
+}
+
+export const LikeReview = reviewId => {
+    return fetch(`http://localhost:8000/reviews/${ reviewId }/signup`, {
+        method: "POST",
+        headers:{
+            "Authorization": `token ${localStorage.getItem("halp_user_id")}`
+        }
+    })
+        .then(response => response.json())
+        .then(getEvents)
+}
