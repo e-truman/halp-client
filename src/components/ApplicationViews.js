@@ -12,7 +12,7 @@ import { ReviewForm } from "./reviews/ReviewForm"
 export const ApplicationViews = () => {
     return (
         <>
-                <Route exact path='/community_resources'>
+                <Route exact path='/'>
                         <ContactTypeList />
                 </Route>
                 <Route exact path='/community_resources/:contactType'>
