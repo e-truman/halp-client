@@ -1,3 +1,57 @@
+
+# Halp!
+
+Halp! is an application that allows users to create, read, and update reviews for community resources in Nashville. Users can also like and unlike reviews.
+
+The purpose of Halp! is to make it easier for people in need, or in crisis situations to find quality services that meet their needs, budget, and location.
+
+The database of community resources in Nashville I used can be found here: https://data.nashville.gov/Police/Community-Resource-Information/ekvg-j2ns
+
+The wireframe to my project can be found here: https://miro.com/app/board/uXjVOeewQog=/
+
+I used MUI for styling
+
+# Images from Halp!
+
+### ERD
+
+<p>
+    <img src="./src/images/HalpERD.png" alt="Erd" width="700" height="500">
+</p>
+
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install 
+  npm install @mui/material @emotion/react @emotion/styled
+  npm install @mui/icons-material
+  cd my-project
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
