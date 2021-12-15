@@ -24,7 +24,7 @@ export const ApplicationViews = () => {
                 <Route exact path='/reviews/:contactId(\d+)'>
                         <ReviewList />
                 </Route>
-                <Route exact path='/my_reviews/:reviewerId'>
+                <Route exact path='/my_reviews'>
                         <ReviewList />
                 </Route>
                 <Route exact path='/write_review/:contactId(\d+)'>

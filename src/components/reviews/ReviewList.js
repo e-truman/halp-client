@@ -7,6 +7,7 @@ import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import EditIcon from '@mui/icons-material/Edit';
 
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
@@ -36,7 +37,7 @@ export const ReviewList = (props) => {
     const [reviews, setReviews] = useState([])
     // const [showComments, setShowComments ] = useState(false)
     const { contactId, reviewerId } = useParams()
-    const myReviewsMode = reviewerId ? true : false
+    const contactsMode = contactId ? true : false
     const [expanded, setExpanded] = React.useState(false);
     const [value, setValue] = React.useState(2);
 
@@ -49,13 +50,13 @@ export const ReviewList = (props) => {
 
     const fetchReviews = () => {
 
-        if (myReviewsMode) {
-            getMyReviews(reviewerId)
+        if (contactsMode) {
+            getReviewsByCommunityResource(contactId)
+
                 .then(data => setReviews(data))
         }
         else {
-            getReviewsByCommunityResource(contactId)
-
+            getMyReviews()
                 .then(data => setReviews(data))
         }
     }
@@ -75,10 +76,10 @@ export const ReviewList = (props) => {
 
 
     const buttons = (id) => {
-        if (myReviewsMode) {
+        if (contactsMode === false) {
             return <div>
-                <button className="btn" onClick={() => history.push(`/edit_review/${id}`)}>EDIT</button>
-                <button className="btn" value={id} onClick={() => { handleDelete(id, fetchReviews) }}><DeleteIcon /></button>
+                <IconButton className="btn" onClick={() => history.push(`/edit_review/${id}`)}><EditIcon /></IconButton>
+                <IconButton className="btn" value={id} onClick={() => { handleDelete(id, fetchReviews) }}><DeleteIcon /></IconButton>
             </div>
         }
     }
@@ -117,7 +118,7 @@ export const ReviewList = (props) => {
     return (
         <>
 
-            <h2 className="title">{myReviewsMode ? "Your Reviews" : "All Reviews"}</h2>
+            <h2 className="title">{contactsMode ? "All Reviews" : "Your Reviews"}</h2>
             <div className="allReviews">
 
                 {
@@ -165,35 +166,25 @@ export const ReviewList = (props) => {
                                 </CardContent>
                                 <CardActions disableSpacing>
 
-
-
-
                                     {
                                         review.reactions && review.reactions[0]?.is_liked
-                                            ? <button className="btn btn-3"
-                                                onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}
-                                            >
-                                                <IconButton aria-label="add to favorites">
+                                            ? 
+                                                <IconButton aria-label="add to favorites" onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}>
                                                     <FavoriteIcon />
                                                 </IconButton>
-                                            </button>
-                                            : <button className="btn btn-2"
-                                                onClick={() => LikeReview(review.id, true).then(() => fetchReviews())}
-                                            >
-                                                <IconButton aria-label="add to favorites">
+                                           
+                                            : 
+                                                <IconButton aria-label="add to favorites" onClick={() => LikeReview(review.id, true).then(() => fetchReviews())}>
                                                     <FavoriteBorderIcon />
                                                 </IconButton>
-                                            </button>
+    
                                     }
 
 
-
-
-
-                                    <IconButton aria-label="share">
+                                    {/* <IconButton aria-label="share">
                                         <ShareIcon />
-                                    </IconButton>
-                                    {myReviewsMode ? buttons(review.id) : ""}
+                                    </IconButton> */}
+                                    {contactsMode === false ? buttons(review.id) : ""}
                                     <ExpandMore
                                         expand={expanded}
                                         onClick={handleExpandClick}
