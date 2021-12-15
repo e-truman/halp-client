@@ -21,7 +21,7 @@ export const ApplicationViews = () => {
                 <Route exact path='/community_resource/:contactId(\d+)'>
                         <CommunityResourceDetail />
                 </Route>
-                <Route exact path='/reviews/:contactId(\d+)'>
+                <Route exact path='/community_resources/reviews/:contactId(\d+)'>
                         <ReviewList />
                 </Route>
                 <Route exact path='/my_reviews'>

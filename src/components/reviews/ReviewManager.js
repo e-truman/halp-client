@@ -28,6 +28,7 @@ export const deleteReview = (reviewId, func) => {
 
 
 export const getReviewsByCommunityResource = (communityResourceId) => {
+    debugger
     return fetch(`http://localhost:8000/reviews?community_resource=${communityResourceId}`,{
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`
