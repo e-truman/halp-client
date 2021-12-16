@@ -34,7 +34,11 @@ Install my-project with npm
   npm install 
   npm install @mui/material @emotion/react @emotion/styled
   npm install @mui/icons-material
-  cd my-project
+  git clone git@github.com:e-truman/halp-client.git
+  cd halp-client
+  npm start
+
+
 ```
 
 
