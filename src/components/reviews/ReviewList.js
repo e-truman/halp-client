@@ -36,16 +36,10 @@ export const ReviewList = (props) => {
     const history = useHistory()
     const [reviews, setReviews] = useState([])
     // const [showComments, setShowComments ] = useState(false)
-    const { contactId, reviewerId } = useParams()
+    const { contactId } = useParams()
     const contactsMode = contactId ? true : false
     const [expanded, setExpanded] = React.useState(false);
     const [value, setValue] = React.useState(2);
-
-
-
-
-
-
 
 
     const fetchReviews = () => {
@@ -111,10 +105,6 @@ export const ReviewList = (props) => {
     //     }
     // }
 
-
-
-    
-
     return (
         <>
 
@@ -132,7 +122,7 @@ export const ReviewList = (props) => {
                                 <CardHeader
                                     avatar={
                                         <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                            {review?.reviewer?.user?.first_name}
+                                            {review?.reviewer?.user?.first_name[0]}
                                         </Avatar>
                                     }
                                     // action={
@@ -166,8 +156,9 @@ export const ReviewList = (props) => {
                                 </CardContent>
                                 <CardActions disableSpacing>
 
+                                        
                                     {
-                                        review.reactions && review.reactions[0]?.is_liked
+                                        review.current_user_reactions && review.current_user_reactions[0]?.is_liked
                                             ? 
                                                 <IconButton aria-label="add to favorites" onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}>
                                                     <FavoriteIcon />
@@ -196,7 +187,7 @@ export const ReviewList = (props) => {
                                 </CardActions>
                                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                                     <CardContent>
-                                        <Typography paragraph>Method:</Typography>
+                                        {/* <Typography paragraph>Review:</Typography> */}
                                         <Typography paragraph>
                                             {review.content}
                                         </Typography>

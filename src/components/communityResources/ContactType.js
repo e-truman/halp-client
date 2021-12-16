@@ -20,12 +20,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to="/community_resources/Childcare">
@@ -39,12 +39,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to="/community_resources/Children's Services">
@@ -60,12 +60,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Christmas'>
@@ -80,12 +80,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Clothing'>
@@ -100,12 +100,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Counseling'>
@@ -122,12 +122,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Crisis Info Resources'>
@@ -142,12 +142,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Disability'>
@@ -163,12 +163,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/ESL classes'>
@@ -184,12 +184,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/GED/Food'>
@@ -205,12 +205,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/GED/Education'>
@@ -224,12 +224,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Health Insurance'>
@@ -243,12 +243,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Housing'>
@@ -262,12 +262,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Immigrant/Refugee'>
@@ -281,12 +281,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Job Training'>
@@ -300,12 +300,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Lawyers/Legal Assistance'>
@@ -319,12 +319,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Medical/Dental'>
@@ -338,12 +338,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to="/community_resources/Men's Resources">
@@ -357,12 +357,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Pet Resources'>
@@ -376,12 +376,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Typography'>
@@ -395,12 +395,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Rehab (Drug and Alcohol)'>
@@ -414,12 +414,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Rent/Mortgage/Utility'>
@@ -433,12 +433,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Senior/Disabled Housing'>
@@ -452,12 +452,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Students'>
@@ -471,12 +471,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Tax Prep'>
@@ -490,12 +490,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Teen Services'>
@@ -509,12 +509,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
+                            {/* <CardMedia
                                 component="img"
                                 height="200"
                                 image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
                                 alt="green iguana"
-                            />
+                            /> */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Transportation Services'>

@@ -37,7 +37,7 @@ export const MyReviewList = (props) => {
     return (
         <>
 
-            <h2 className="title">All Reviews</h2>
+            <h2 className="title">My Reviews</h2>
             <div className="allReviews">
 
                 {

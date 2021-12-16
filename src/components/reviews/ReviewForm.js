@@ -12,7 +12,7 @@ import { getCommunityResourceById } from "../communityResources/CommunityResourc
 
 export const ReviewForm = () => {
     const [communityResource, setCommunityResource] = useState({})
-    const { contactId, reviewId, reviewerId } = useParams()
+    const { contactId, reviewId } = useParams()
     const [review, setReview] = useState({
         rating:0
     })
@@ -94,7 +94,7 @@ export const ReviewForm = () => {
                 createdOn: review.createdOn,
                 approved: review.approved
             })
-                .then(() => history.push('/community_resources'))
+                .then(() => history.push('/my_reviews'))
         } else {
             // POST
             createReview({
@@ -106,7 +106,7 @@ export const ReviewForm = () => {
                 isPublished: true,
                 approved: true
             })
-                .then(() => history.push('/community_resources'))
+                .then(() => history.push('/my_reviews'))
         }
     }
 
