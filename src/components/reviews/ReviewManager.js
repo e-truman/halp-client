@@ -94,7 +94,6 @@ export const UnlikeReview = (reviewId, reaction) => {
 
 
 export const LikeReview = (reviewId, reaction) => {
-    debugger
     return fetch(`https://halp-server.herokuapp.com/reviews/${ reviewId }/react`, {
         method: "POST",
         headers:{

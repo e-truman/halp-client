@@ -158,7 +158,7 @@ export const ReviewList = (props) => {
 
                                         
                                     {
-                                        review.reactions && review.reactions[0]?.is_liked
+                                        review.current_user_reactions && review.current_user_reactions[0]?.is_liked
                                             ? 
                                                 <IconButton aria-label="add to favorites" onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}>
                                                     <FavoriteIcon />
