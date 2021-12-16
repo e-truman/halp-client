@@ -187,7 +187,7 @@ export const ReviewList = (props) => {
                                 </CardActions>
                                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                                     <CardContent>
-                                        <Typography paragraph>Method:</Typography>
+                                        {/* <Typography paragraph>Review:</Typography> */}
                                         <Typography paragraph>
                                             {review.content}
                                         </Typography>
