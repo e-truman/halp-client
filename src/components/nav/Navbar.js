@@ -178,7 +178,9 @@ export const Navbar = () => {
                             <Box sx={{ flexGrow: 0 }}>
                                 <Tooltip title="Open settings">
                                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                   <Link to= "/my_profile">
                                         <Avatar alt="profile" src="/static/images/avatar/2.jpg" />
+                                        </Link>
                                     </IconButton>
                                 </Tooltip>
                                 <Menu

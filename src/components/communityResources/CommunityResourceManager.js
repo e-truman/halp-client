@@ -1,5 +1,5 @@
 export const getAllCommunityResources = () => {
-    return fetch("https://halp-server.herokuapp.com/community_resources", {
+    return fetch("http://localhost:8000/community_resources", {
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }
@@ -8,7 +8,7 @@ export const getAllCommunityResources = () => {
 };
 
 export const getCommunityResourceById = (id) => {
-    return fetch(`https://halp-server.herokuapp.com/community_resources/${id}`, {
+    return fetch(`http://localhost:8000/community_resources/${id}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }
@@ -18,7 +18,7 @@ export const getCommunityResourceById = (id) => {
 
 
 export const getCommunityResourceByContactType = (type) => {
-    return fetch(`https://halp-server.herokuapp.com/community_resources?contact_type=${type}`, {
+    return fetch(`http://localhost:8000/community_resources?contact_type=${type}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }

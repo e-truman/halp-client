@@ -1,5 +1,5 @@
 export const getAllReviews = () => {
-    return fetch("https://halp-server.herokuapp.com/reviews", {
+    return fetch("http://localhost:8000/reviews", {
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }
@@ -8,7 +8,7 @@ export const getAllReviews = () => {
 };
 
 export const getReviewById = (id) => {
-    return fetch(`https://halp-server.herokuapp.com/reviews/${id}`, {
+    return fetch(`http://localhost:8000/reviews/${id}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }
@@ -17,7 +17,7 @@ export const getReviewById = (id) => {
 };
 
 export const deleteReview = (reviewId, func) => {
-    fetch(`https://halp-server.herokuapp.com/reviews/${reviewId}`, {
+    fetch(`http://localhost:8000/reviews/${reviewId}`, {
         method: "DELETE",
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
@@ -28,7 +28,7 @@ export const deleteReview = (reviewId, func) => {
 
 
 export const getReviewsByCommunityResource = (communityResourceId) => {
-    return fetch(`https://halp-server.herokuapp.com/reviews?community_resource=${communityResourceId}`,{
+    return fetch(`http://localhost:8000/reviews?community_resource=${communityResourceId}`,{
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`
         }})
@@ -36,7 +36,7 @@ export const getReviewsByCommunityResource = (communityResourceId) => {
 }
 
 export const getMyReviews = () => {
-    return fetch(`https://halp-server.herokuapp.com/reviews?reviewer=true`,{
+    return fetch(`http://localhost:8000/reviews?reviewer=true`,{
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`
         }})
@@ -44,7 +44,7 @@ export const getMyReviews = () => {
 }
 
 export const publishOrUnpublish = (reviewId) => {
-    return fetch(`https://halp-server.herokuapp.com/reviews/${reviewId}/publish`, {
+    return fetch(`http://localhost:8000/reviews/${reviewId}/publish`, {
         method: "PUT",
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
@@ -55,7 +55,7 @@ export const publishOrUnpublish = (reviewId) => {
 }
 
 export const createReview = (review) => {
-    return fetch(`https://halp-server.herokuapp.com/reviews`,{
+    return fetch(`http://localhost:8000/reviews`,{
         method: "POST",
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
@@ -67,7 +67,7 @@ export const createReview = (review) => {
 }
 
 export const updateReview = (review) => {
-    return fetch(`https://halp-server.herokuapp.com/reviews/${review.id}`,{
+    return fetch(`http://localhost:8000/reviews/${review.id}`,{
         method: "PUT",
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
@@ -81,7 +81,7 @@ export const updateReview = (review) => {
 
 
 export const UnlikeReview = (reviewId, reaction) => {
-    return fetch(`https://halp-server.herokuapp.com/reviews/${ reviewId }/react`, {
+    return fetch(`http://localhost:8000/reviews/${ reviewId }/react`, {
         method: "POST",
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
@@ -94,7 +94,7 @@ export const UnlikeReview = (reviewId, reaction) => {
 
 
 export const LikeReview = (reviewId, reaction) => {
-    return fetch(`https://halp-server.herokuapp.com/reviews/${ reviewId }/react`, {
+    return fetch(`http://localhost:8000/reviews/${ reviewId }/react`, {
         method: "POST",
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
