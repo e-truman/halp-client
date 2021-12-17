@@ -151,7 +151,9 @@ export const ReviewList = (props) => {
 
                                     </Box>
 
-
+                                    <Typography variant="body2" color="text.secondary">
+                                        {review.content}
+                                    </Typography>
 
                                 </CardContent>
                                 <CardActions disableSpacing>
@@ -176,24 +178,23 @@ export const ReviewList = (props) => {
                                         <ShareIcon />
                                     </IconButton> */}
                                     {contactsMode === false ? buttons(review.id) : ""}
-                                    <ExpandMore
+                                     {/* <ExpandMore
                                         expand={expanded}
                                         onClick={handleExpandClick}
                                         aria-expanded={expanded}
                                         aria-label="show more"
                                     >
                                         <ExpandMoreIcon />
-                                    </ExpandMore>
+                                    </ExpandMore> */}
                                 </CardActions>
-                                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                                {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
                                     <CardContent>
-                                        {/* <Typography paragraph>Review:</Typography> */}
                                         <Typography paragraph>
                                             {review.content}
                                         </Typography>
 
                                     </CardContent>
-                                </Collapse>
+                                </Collapse>  */}
                             </Card>
 
 

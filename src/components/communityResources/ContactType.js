@@ -29,7 +29,7 @@ export const ContactTypeList = (props) => {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to="/community_resources/Childcare">
-                                        Children's Services
+                                        Childcare
                                     </Link>
                                 </Typography>
                             </CardContent>
@@ -131,7 +131,7 @@ export const ContactTypeList = (props) => {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Crisis Info Resources'>
-                                        Crisis Info Resources
+                                        Crisis Resources
                                     </Link>
                                 </Typography>
                             </CardContent>
@@ -172,7 +172,7 @@ export const ContactTypeList = (props) => {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/ESL classes'>
-                                        ESL classes
+                                        ESL Classes
                                     </Link>
                                 </Typography>
                             </CardContent>
@@ -309,7 +309,7 @@ export const ContactTypeList = (props) => {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Lawyers/Legal Assistance'>
-                                        Lawyers/Legal Assistance
+                                        Legal Assistance
                                     </Link>
                                 </Typography>
                             </CardContent>
@@ -404,7 +404,7 @@ export const ContactTypeList = (props) => {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Rehab (Drug and Alcohol)'>
-                                        Rehab (Drug and Alcohol)
+                                        Rehab
                                     </Link>
                                 </Typography>
                             </CardContent>
@@ -442,7 +442,7 @@ export const ContactTypeList = (props) => {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Senior/Disabled Housing'>
-                                        Senior/disabled housing
+                                        Senior/Disabled Housing
                                     </Link>
                                 </Typography>
                             </CardContent>
@@ -518,7 +518,7 @@ export const ContactTypeList = (props) => {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link to='/community_resources/Transportation Services'>
-                                        Transportation Services
+                                        Transportation
                                     </Link>
                                 </Typography>
                             </CardContent>
