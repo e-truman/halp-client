@@ -36,7 +36,7 @@ export const ReviewList = (props) => {
     const history = useHistory()
     const [reviews, setReviews] = useState([])
     // const [showComments, setShowComments ] = useState(false)
-    const { contactId } = useParams()
+    const { contactId, reviewerId } = useParams()
     const contactsMode = contactId ? true : false
     const [expanded, setExpanded] = React.useState(false);
     const [value, setValue] = React.useState(2);
@@ -107,22 +107,17 @@ export const ReviewList = (props) => {
 
     return (
         <>
-
             <h2 className="title">{contactsMode ? "All Reviews" : "Your Reviews"}</h2>
             <div className="allReviews">
 
                 {
                     reviews.map((review) => {
                         return <>
-
-
-
-
                             <Card sx={{ maxWidth: 345 }}>
                                 <CardHeader
                                     avatar={
                                         <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                            {review?.reviewer?.user?.first_name[0]}
+                                            <Link to={`/profile/${review.reviewer.id}`}> {review?.reviewer?.user?.first_name[0]}</Link>
                                         </Avatar>
                                     }
                                     // action={
@@ -133,8 +128,6 @@ export const ReviewList = (props) => {
                                     title={review?.community_resource?.contact}
                                 // subheader="September 14, 2016"
                                 />
-
-
                                 <CardContent>
                                     <Typography variant="body2" color="text.secondary">
                                         {review.title}
@@ -164,8 +157,7 @@ export const ReviewList = (props) => {
                                             ? 
                                                 <IconButton aria-label="add to favorites" onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}>
                                                     <FavoriteIcon />
-                                                </IconButton>
-                                           
+                                                </IconButton> 
                                             : 
                                                 <IconButton aria-label="add to favorites" onClick={() => LikeReview(review.id, true).then(() => fetchReviews())}>
                                                     <FavoriteBorderIcon />
@@ -177,8 +169,8 @@ export const ReviewList = (props) => {
                                     {/* <IconButton aria-label="share">
                                         <ShareIcon />
                                     </IconButton> */}
-                                    {contactsMode === false ? buttons(review.id) : ""}
-                                     {/* <ExpandMore
+                                    {contactsMode === reviewerId ? buttons(review.id) : ""}
+                                    {/* <ExpandMore
                                         expand={expanded}
                                         onClick={handleExpandClick}
                                         aria-expanded={expanded}
