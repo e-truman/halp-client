@@ -31,7 +31,6 @@ import MenuItem from '@mui/material/MenuItem';
 
 
 export const Navbar = () => {
-    const settings = ['Profile', 'Logout'];
     const history = useHistory()
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -91,28 +90,6 @@ export const Navbar = () => {
     };
 
     const handleCloseNavMenu = () => {
-        if (settings === 'Logout') {
-            (localStorage.getItem("halp_user_id") !== null) ?
-
-                <button className="nav-link fakeLink"
-                    onClick={() => {
-                        localStorage.removeItem("halp_user_id")
-                        history.push({ pathname: "/" })
-                    }}
-                >Logout</button>
-                :
-                <>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/login">Login</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/register">Register</Link>
-                    </li>
-                </>
-        }
-
-
-
         setAnchorElNav(null);
     };
 
