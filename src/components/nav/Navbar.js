@@ -23,9 +23,9 @@ import logo from './halpLogo.png';
 
 
 
-const pages = [<Link className="navbar__link" to="/write_review">Write a Review</Link>, 
-<Link className="navbar__link" to={`/my_reviews`}>Your Reviews</Link>];
-const settings = [<Link className="navbar__link" to="my_profile">Profile</Link>, 'Logout'];
+const pages = [<Link className="link" to="/write_review">Write a Review</Link>, 
+<Link className="link" to={`/my_reviews`}>Your Reviews</Link>];
+const settings = [<Link className="link" to="my_profile">Profile</Link>, 'Logout'];
 
 
 
@@ -101,7 +101,7 @@ export const Navbar = () => {
     return (
 
         <>
-            <AppBar position="static">
+            <AppBar className="app__bar" position="static">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography
@@ -110,7 +110,7 @@ export const Navbar = () => {
                             component="div"
                             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                         >
-                            <Link className="navbar__link" to="/"><img className="navbar__logo" src={logo} alt="logo" /></Link>
+                            <Link className="link" to="/"><img className="navbar__logo" src={logo} alt="logo" /></Link>
                             
                         </Typography>
 
@@ -194,7 +194,7 @@ export const Navbar = () => {
                             >
                                 
                                     <MenuItem  onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center"><Link className="navbar__link" to="my_profile">Profile</Link></Typography>
+                                        <Typography textAlign="center"><Link className="link" to="my_profile">Profile</Link></Typography>
                                     </MenuItem>
                                     <MenuItem  onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">

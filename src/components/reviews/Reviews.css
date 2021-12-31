@@ -1,0 +1,35 @@
+.card__container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+
+
+.card{
+    align-items: center;
+    word-wrap: break-word;
+    padding: 1em;
+    width: 25em;
+    height: 25%;
+}
+
+
+
+
+
+
+
+
+.review_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title {
+    padding-left: 1.5em;
+    font-size: 3em;
+}

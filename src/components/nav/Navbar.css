@@ -12,3 +12,7 @@
 .navbar__logo {
     max-height: 4rem;
 } 
+
+.app__bar {
+    background-color: aliceblue;
+}

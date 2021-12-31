@@ -9,6 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EditIcon from '@mui/icons-material/Edit';
 
+
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 // import Typography from '@mui/material/Typography';
@@ -30,6 +31,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import "./Reviews.css"
 
 export const ReviewList = (props) => {
     console.log(props)
@@ -107,70 +109,71 @@ export const ReviewList = (props) => {
 
     return (
         <>
+            <div className="card__container">
             <h2 className="title">{contactsMode ? "All Reviews" : "Your Reviews"}</h2>
-            <div className="allReviews">
-
-                {
-                    reviews.map((review) => {
-                        return <>
-                            <Card sx={{ maxWidth: 345 }}>
-                                <CardHeader
-                                    avatar={
-                                        <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                            <Link to={`/profile/${review.reviewer.id}`}> {review?.reviewer?.user?.first_name[0]}</Link>
-                                        </Avatar>
-                                    }
-                                    // action={
-                                    //     <IconButton aria-label="settings">
-                                    //         <MoreVertIcon />
-                                    //     </IconButton>
-                                    // }
-                                    title={review?.community_resource?.contact}
-                                // subheader="September 14, 2016"
-                                />
-                                <CardContent>
-                                    <Typography variant="body2" color="text.secondary">
-                                        {review.title}
-                                    </Typography>
-
-
-                                    <Box
-                                        sx={{
-                                            '& > legend': { mt: 2 },
-                                        }}
-                                    >
-
-                                        <Rating name="read-only" value={review.rating} readOnly />
-
-                                    </Box>
-
-                                    <Typography variant="body2" color="text.secondary">
-                                        {review.content}
-                                    </Typography>
-
-                                </CardContent>
-                                <CardActions disableSpacing>
-
-                                        
-                                    {
-                                        review.current_user_reactions && review.current_user_reactions[0]?.is_liked
-                                            ? 
-                                                <IconButton aria-label="add to favorites" onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}>
-                                                    <FavoriteIcon />
-                                                </IconButton> 
-                                            : 
-                                                <IconButton aria-label="add to favorites" onClick={() => LikeReview(review.id, true).then(() => fetchReviews())}>
-                                                    <FavoriteBorderIcon />
-                                                </IconButton>
-    
-                                    }
+                <div className="review_cards">
+                    {
+                        reviews.map((review) => {
+                            return <>
+                                <div className="card">
+                                    <Card sx={{ maxWidth: 345 }}>
+                                        <CardHeader
+                                            avatar={
+                                                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                                                    <Link className="link" to={`/profile/${review.reviewer.id}`}> {review?.reviewer?.user?.first_name[0]}</Link>
+                                                </Avatar>
+                                            }
+                                            // action={
+                                            //     <IconButton aria-label="settings">
+                                            //         <MoreVertIcon />
+                                            //     </IconButton>
+                                            // }
+                                            title={review?.community_resource?.contact}
+                                        // subheader="September 14, 2016"
+                                        />
+                                        <CardContent>
+                                            <Typography variant="body2" color="text.secondary">
+                                                {review.title}
+                                            </Typography>
 
 
-                                    {/* <IconButton aria-label="share">
+                                            <Box
+                                                sx={{
+                                                    '& > legend': { mt: 2 },
+                                                }}
+                                            >
+
+                                                <Rating name="read-only" value={review.rating} readOnly />
+
+                                            </Box>
+
+                                            <Typography variant="body2" color="text.secondary">
+                                                {review.content}
+                                            </Typography>
+
+                                        </CardContent>
+                                        <CardActions disableSpacing>
+
+
+                                            {
+                                                review.current_user_reactions && review.current_user_reactions[0]?.is_liked
+                                                    ?
+                                                    <IconButton aria-label="add to favorites" onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}>
+                                                        <FavoriteIcon />
+                                                    </IconButton>
+                                                    :
+                                                    <IconButton aria-label="add to favorites" onClick={() => LikeReview(review.id, true).then(() => fetchReviews())}>
+                                                        <FavoriteBorderIcon />
+                                                    </IconButton>
+
+                                            }
+
+
+                                            {/* <IconButton aria-label="share">
                                         <ShareIcon />
                                     </IconButton> */}
-                                    {contactsMode === reviewerId ? buttons(review.id) : ""}
-                                    {/* <ExpandMore
+                                            {contactsMode ? "" : buttons(review.id)}
+                                            {/* <ExpandMore
                                         expand={expanded}
                                         onClick={handleExpandClick}
                                         aria-expanded={expanded}
@@ -178,8 +181,8 @@ export const ReviewList = (props) => {
                                     >
                                         <ExpandMoreIcon />
                                     </ExpandMore> */}
-                                </CardActions>
-                                {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
+                                        </CardActions>
+                                        {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
                                     <CardContent>
                                         <Typography paragraph>
                                             {review.content}
@@ -187,15 +190,15 @@ export const ReviewList = (props) => {
 
                                     </CardContent>
                                 </Collapse>  */}
-                            </Card>
+                                    </Card>
 
+                                </div>
+                            </>
+                        }
+                        )
 
-                        </>
                     }
-                    )
-
-                }
-
+                </div>
             </div>
 
         </>
