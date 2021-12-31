@@ -24,7 +24,7 @@ import logo from './halpLogo.png';
 
 
 const pages = [<Link className="navbar__link" to="/write_review">Write a Review</Link>, 
-<Link className="navbar__link" to={`/my_reviews`}>Your Reviews</Link>, 'Blog'];
+<Link className="navbar__link" to={`/my_reviews`}>Your Reviews</Link>];
 const settings = [<Link className="navbar__link" to="my_profile">Profile</Link>, 'Logout'];
 
 
@@ -226,7 +226,6 @@ export const Navbar = () => {
                     </Toolbar>
                 </Container>
             </AppBar>
-            );
 
         </>
 
