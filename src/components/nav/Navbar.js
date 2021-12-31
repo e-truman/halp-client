@@ -23,8 +23,9 @@ import logo from './halpLogo.png';
 
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [<Link className="navbar__link" to="/write_review">Write a Review</Link>, 
+<Link className="navbar__link" to={`/my_reviews`}>Your Reviews</Link>, 'Blog'];
+const settings = [<Link className="navbar__link" to="my_profile">Profile</Link>, 'Logout'];
 
 
 
@@ -109,7 +110,8 @@ export const Navbar = () => {
                             component="div"
                             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                         >
-                            <img className="navbar__logo" src={logo} alt="logo" />
+                            <Link className="navbar__link" to="/"><img className="navbar__logo" src={logo} alt="logo" /></Link>
+                            
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -171,7 +173,7 @@ export const Navbar = () => {
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                    <Avatar alt={reviewer.username} src={reviewer.profile_pic} />
                                 </IconButton>
                             </Tooltip>
                             <Menu
@@ -190,11 +192,35 @@ export const Navbar = () => {
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}
                             >
-                                {settings.map((setting) => (
-                                    <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{setting}</Typography>
+                                
+                                    <MenuItem  onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center"><Link className="navbar__link" to="my_profile">Profile</Link></Typography>
                                     </MenuItem>
-                                ))}
+                                    <MenuItem  onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">
+                                    {
+                                                (localStorage.getItem("halp_user_id") !== null) ?
+
+                                                    <p className="nav-link fakeLink"
+                                                        onClick={() => {
+                                                            localStorage.removeItem("halp_user_id")
+                                                            history.push({ pathname: "/" })
+                                                        }}
+                                                    >Logout</p>
+                                                    :
+                                                    <>
+                                                        <li className="nav-item">
+                                                            <Link className="nav-link" to="/login">Login</Link>
+                                                        </li>
+                                                        <li className="nav-item">
+                                                            <Link className="nav-link" to="/register">Register</Link>
+                                                        </li>
+                                                    </>
+                                            }
+                                    </Typography>
+                                </MenuItem>
+                                    
+                              
                             </Menu>
                         </Box>
                     </Toolbar>
