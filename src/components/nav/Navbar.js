@@ -23,7 +23,10 @@ import logo from './halpLogo.png';
 
 
 
-const pages = [<Link className="link" to="/write_review">Write a Review</Link>, 
+
+
+const pages = [
+<Link className="link" to="/write_review">Write a Review</Link>, 
 <Link className="link" to={`/my_reviews`}>Your Reviews</Link>];
 const settings = [<Link className="link" to="my_profile">Profile</Link>, 'Logout'];
 
@@ -97,11 +100,14 @@ export const Navbar = () => {
         },
     }));
 
+   
+    
+
 
     return (
 
         <>
-            <AppBar className="app__bar" position="static">
+            <AppBar style={{ background: 'lightblue'}} elevation={0} position="static">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography
