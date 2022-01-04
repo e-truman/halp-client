@@ -171,7 +171,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link className="link" to='/community_resources/ESL classes'>
+                                    <Link className="link" to='/community_resources/ESL Classes'>
                                         ESL Classes
                                     </Link>
                                 </Typography>
@@ -192,7 +192,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link className="link" to='/community_resources/GED/Food'>
+                                    <Link className="link" to='/community_resources/Food'>
                                         Food
                                     </Link>
                                 </Typography>
@@ -213,7 +213,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link className="link" to='/community_resources/GED/Education'>
+                                    <Link className="link" to='/community_resources/GED%2fEducation'>
                                         GED/Education
                                     </Link>
                                 </Typography>
@@ -270,7 +270,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link className="link" to='/community_resources/Immigrant/Refugee'>
+                                    <Link className="link" to='/community_resources/Immigrant%2fRefugee'>
                                         Immigrant/Refugee
                                     </Link>
                                 </Typography>
@@ -296,6 +296,42 @@ export const ContactTypeList = (props) => {
                             </CardContent>
                         </Card>
                     </div>
+                    <div className="card">
+
+                        <Card sx={{ maxWidth: 345 }}>
+                            <CardMedia
+                                component="img"
+                                height="200"
+                                image="https://image.freepik.com/free-vector/judge-concept-illustration_114360-2189.jpg"
+                                alt="green iguana"
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    <Link className="link" to='/community_resources/Lawyers (Divorce)'>
+                                        Lawyers (Divorce)
+                                    </Link>
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </div>
+                    <div className="card">
+
+                        <Card sx={{ maxWidth: 345 }}>
+                            <CardMedia
+                                component="img"
+                                height="200"
+                                image="https://image.freepik.com/free-vector/illustration-weighing-scale_53876-28507.jpg"
+                                alt="green iguana"
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    <Link className="link" to='/community_resources/Lawyers (Immigration)'>
+                                        Lawyers (Immigration)
+                                    </Link>
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </div>
 
                     <div className="card">
 
@@ -308,7 +344,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link className="link" to='/community_resources/Lawyers/Legal Assistance'>
+                                    <Link className="link" to='/community_resources/Legal Assistance'>
                                         Legal Assistance
                                     </Link>
                                 </Typography>
@@ -327,7 +363,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link className="link" to='/community_resources/Medical/Dental'>
+                                    <Link className="link" to='/community_resources/Medical%2fDental'>
                                         Medical/Dental
                                     </Link>
                                 </Typography>
@@ -384,7 +420,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link  className="link" to='/community_resources/Typography'>
+                                    <Link  className="link" to='/community_resources/Phone'>
                                         Phone
                                     </Link>
                                 </Typography>
@@ -403,7 +439,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link className="link" to='/community_resources/Rehab (Drug and Alcohol)'>
+                                    <Link className="link" to='/community_resources/Rehab - Drug%2fAlcohol'>
                                         Rehab
                                     </Link>
                                 </Typography>
@@ -422,7 +458,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link className="link" to='/community_resources/Rent/Mortgage/Utility'>
+                                    <Link className="link" to='/community_resources/Rent%2fMortgage%2fUtility Help'>
                                         Rent/Mortgage/Utility
                                     </Link>
                                 </Typography>
@@ -441,7 +477,7 @@ export const ContactTypeList = (props) => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link className="link" to='/community_resources/Senior/Disabled Housing'>
+                                    <Link className="link" to='/community_resources/Senior%2fDisabled Housing'>
                                         Senior/Disabled Housing
                                     </Link>
                                 </Typography>
@@ -544,6 +580,8 @@ export const ContactTypeList = (props) => {
                         Housing: <a className="link" href="https://www.freepik.com/vectors/people">People vector created by pch.vector - www.freepik.com</a>, 
                         Immigrant/refugee: <a className="link" href="https://www.freepik.com/vectors/car">Car vector created by vectorjuice - www.freepik.com</a>, 
                         Job Training: <a className="link" href="https://www.freepik.com/vectors/business">Business vector created by pch.vector - www.freepik.com</a>, 
+                        Lawyers (Divorce): <a className="link" href="https://www.freepik.com/vectors/work">Work vector created by stories - www.freepik.com</a>, 
+                        Lawyers (Immigration): <a className="link" href="https://www.freepik.com/vectors/sale">Sale vector created by rawpixel.com - www.freepik.com</a>, 
                         Legal Assistance: <a className="link" href="https://www.freepik.com/vectors/background">Background vector created by rawpixel.com - www.freepik.com</a>, 
                         Medical/Dental: <a className="link" href="https://www.freepik.com/vectors/medical">Medical vector created by stories - www.freepik.com</a>, 
                         Men's Resources: <a className="link" href="https://www.freepik.com/vectors/background">Background vector created by pikisuperstar - www.freepik.com</a>, 

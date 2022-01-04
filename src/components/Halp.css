@@ -44,5 +44,6 @@
 
 
 .link:hover {
-  color:rgb(132, 112, 245)
+  color:rgb(132, 112, 245); 
+  background-color: transparent;
 }

@@ -35,6 +35,23 @@
 		padding: 5%;
 	}
 
+    .resource_cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		/* padding: 5%; */
+	}
+
+    .resource_card{
+		align-items: center;
+		text-align: center;
+		word-wrap: break-word;
+        margin: 2em 1em;
+        padding: 2em;
+        width: 25em;
+        height: 20em;
+	}
+
     .attributions {
         color: rgb(97, 96, 96);
         opacity: 50%;
