@@ -83,7 +83,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/hand-drawn-clothing-donation-illustration_23-2148814803.jpg"
+                                image="https://image.freepik.com/free-vector/hand-drawn-clothing-donation-concept_52683-54811.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -208,7 +208,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/students-watching-webinar-computer-studying-online_74855-15522.jpg"
+                                image="https://image.freepik.com/free-vector/happy-diverse-students-celebrating-graduation-from-school_74855-5853.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -303,7 +303,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/lawyer-concept-illustration_114360-4122.jpg"
+                                image="https://image.freepik.com/free-vector/illustration-people-with-justice-order-icons_53876-77429.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -452,12 +452,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            {/* <CardMedia
+                            <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
+                                image="https://image.freepik.com/free-vector/students-watching-webinar-computer-studying-online_74855-15522.jpg"
                                 alt="green iguana"
-                            /> */}
+                            />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link className="link" to='/community_resources/Students'>
@@ -471,12 +471,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            {/* <CardMedia
+                            <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
+                                image="https://image.freepik.com/free-vector/marking-checkbox-document-tax-management-billing-obligation-giving-permission-approve-decision-check-box-signature-stroke-warranty-list-vector-isolated-concept-metaphor-illustration_335657-4318.jpg"
                                 alt="green iguana"
-                            /> */}
+                            />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link className="link" to='/community_resources/Tax Prep'>
@@ -528,31 +528,34 @@ export const ContactTypeList = (props) => {
 
 
                 </div>
-                <footer>
+                <footer className="attributions">
                     <p>
-                        Children's Services: <a href="https://www.freepik.com/vectors/party">Party vector created by pch.vector - www.freepik.com</a>
-                        Childcare: <a href="https://www.freepik.com/vectors/school">School vector created by pch.vector - www.freepik.com</a>
-                        Christmas: <a href="https://www.freepik.com/vectors/christmas">Christmas vector created by rawpixel.com - www.freepik.com</a>
-                        Clothing: <a href="https://www.freepik.com/vectors/clothes">Clothes vector created by freepik - www.freepik.com</a>
-                        Counseling: <a href="https://www.freepik.com/vectors/infographic">Infographic vector created by pch.vector - www.freepik.com</a>
-                        Crisis Resources: <a href="https://www.freepik.com/vectors/woman">Woman vector created by pch.vector - www.freepik.com</a>
-                        Disability: <a href="https://www.freepik.com/vectors/people">People vector created by pikisuperstar - www.freepik.com</a>
-                        ESL Classes: <a href="https://www.freepik.com/vectors/school">School vector created by pch.vector - www.freepik.com</a>
-                        Food: <a href="https://www.freepik.com/vectors/background">Background vector created by pikisuperstar - www.freepik.com</a>
-                        GED/Education: <a href="https://www.freepik.com/vectors/school">School vector created by pch.vector - www.freepik.com</a>
-                        Health Insurance: <a href="https://www.freepik.com/vectors/background">Background vector created by rawpixel.com - www.freepik.com</a>
-                        Housing: <a href="https://www.freepik.com/vectors/people">People vector created by pch.vector - www.freepik.com</a>
-                        Immigrant/refugee: <a href="https://www.freepik.com/vectors/car">Car vector created by vectorjuice - www.freepik.com</a>
-                        Job Training: <a href="https://www.freepik.com/vectors/business">Business vector created by pch.vector - www.freepik.com</a>
-                        Legal Assistance: <a href="https://www.freepik.com/vectors/woman">Woman vector created by stories - www.freepik.com</a>
-                        Medical: <a href="https://www.freepik.com/vectors/medical">Medical vector created by stories - www.freepik.com</a>
-                        Men's Resources: <a href="https://www.freepik.com/vectors/background">Background vector created by pikisuperstar - www.freepik.com</a>
-                        Phone: <a href="https://www.freepik.com/vectors/technology">Technology vector created by pch.vector - www.freepik.com</a>
-                        Pets: <a href="https://www.freepik.com/vectors/people">People vector created by pch.vector - www.freepik.com</a>
-                        Rehab: <a href="https://www.freepik.com/vectors/health">Health vector created by freepik - www.freepik.com</a>
-                        Rent, Mortgage, Utilities: <a href="https://www.freepik.com/vectors/cartoon">Cartoon vector created by vectorjuice - www.freepik.com</a>
-                        Senior/disabled housing: <a href="https://www.freepik.com/vectors/character">Character vector created by vectorjuice - www.freepik.com</a>
-                        Transportation: <a href="https://www.freepik.com/vectors/car">Car vector created by pch.vector - www.freepik.com</a>
+                        Children's Services: <a className="link" href="https://www.freepik.com/vectors/party">Party vector created by pch.vector - www.freepik.com</a>, 
+                        Childcare: <a className="link" href="https://www.freepik.com/vectors/school">School vector created by pch.vector - www.freepik.com</a>, 
+                        Christmas: <a className="link" href="https://www.freepik.com/vectors/christmas">Christmas vector created by rawpixel.com - www.freepik.com</a>, 
+                        Clothing: <a className="link" href="https://www.freepik.com/vectors/box">Box vector created by pikisuperstar - www.freepik.com</a>, 
+                        Counseling: <a className="link" href="https://www.freepik.com/vectors/infographic">Infographic vector created by pch.vector - www.freepik.com</a>, 
+                        Crisis Resources: <a className="link" href="https://www.freepik.com/vectors/woman">Woman vector created by pch.vector - www.freepik.com</a>, 
+                        Disability: <a className="link" href="https://www.freepik.com/vectors/people">People vector created by pikisuperstar - www.freepik.com</a>, 
+                        ESL Classes: <a className="link" href="https://www.freepik.com/vectors/school">School vector created by pch.vector - www.freepik.com</a>, 
+                        Food: <a className="link" href="https://www.freepik.com/vectors/background">Background vector created by pikisuperstar - www.freepik.com</a>, 
+                        GED/Education: <a className="link" href="https://www.freepik.com/vectors/certificate">Certificate vector created by pch.vector - www.freepik.com</a>,  
+                        Health Insurance: <a className="link" href="https://www.freepik.com/vectors/background">Background vector created by rawpixel.com - www.freepik.com</a>, 
+                        Housing: <a className="link" href="https://www.freepik.com/vectors/people">People vector created by pch.vector - www.freepik.com</a>, 
+                        Immigrant/refugee: <a className="link" href="https://www.freepik.com/vectors/car">Car vector created by vectorjuice - www.freepik.com</a>, 
+                        Job Training: <a className="link" href="https://www.freepik.com/vectors/business">Business vector created by pch.vector - www.freepik.com</a>, 
+                        Legal Assistance: <a className="link" href="https://www.freepik.com/vectors/background">Background vector created by rawpixel.com - www.freepik.com</a>, 
+                        Medical/Dental: <a className="link" href="https://www.freepik.com/vectors/medical">Medical vector created by stories - www.freepik.com</a>, 
+                        Men's Resources: <a className="link" href="https://www.freepik.com/vectors/background">Background vector created by pikisuperstar - www.freepik.com</a>, 
+                        Phone: <a className="link" href="https://www.freepik.com/vectors/technology">Technology vector created by pch.vector - www.freepik.com</a>, 
+                        Pet Resources: <a className="link" href="https://www.freepik.com/vectors/people">People vector created by pch.vector - www.freepik.com</a>, 
+                        Rehab: <a className="link" href="https://www.freepik.com/vectors/health">Health vector created by freepik - www.freepik.com</a>, 
+                        Rent/Mortgage/Utilities: <a className="link" href="https://www.freepik.com/vectors/cartoon">Cartoon vector created by vectorjuice - www.freepik.com</a>, 
+                        Senior/disabled housing: <a className="link" href="https://www.freepik.com/vectors/character">Character vector created by vectorjuice - www.freepik.com</a>
+                        Students: <a className="link" href="https://www.freepik.com/vectors/school">School vector created by pch.vector - www.freepik.com</a>,
+                        Tax Prep: <a className="link" href="https://www.freepik.com/vectors/money">Money vector created by vectorjuice - www.freepik.com</a>
+                        Teen Services: <a className="link" href="https://www.freepik.com/vectors/people">People vector created by pikisuperstar - www.freepik.com</a>
+                        Transportation: <a className="link" href="https://www.freepik.com/vectors/car">Car vector created by pch.vector - www.freepik.com</a>
                     </p>
                 </footer>
 

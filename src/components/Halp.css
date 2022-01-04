@@ -39,4 +39,10 @@
 
 .link {
   text-decoration: none;
+  color: rgb(97, 96, 96);
+}
+
+
+.link:hover {
+  color:rgb(132, 112, 245)
 }

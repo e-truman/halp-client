@@ -16,11 +16,7 @@
 		padding: .3em;
 	}
 
-	.technologies {
-		position: relative;
-		padding-top: 2em;
-		padding-bottom: 2em;
-	}
+	
 
 	.card_container{
 		width: 100%;
@@ -38,3 +34,10 @@
 		/* box-shadow: #757575bd 0 8px 6px -6px; */
 		padding: 5%;
 	}
+
+    .attributions {
+        color: rgb(97, 96, 96);
+        opacity: 50%;
+        margin-right: 1em;
+        font-size: .75em;
+    }
