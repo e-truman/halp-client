@@ -23,7 +23,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/diversity-childhood-concept_74855-7176.jpg"
+                                image="https://image.freepik.com/free-vector/young-teacher-with-joyful-kids_74855-6162.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -42,7 +42,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/young-teacher-with-joyful-kids_74855-6162.jpg"
+                                image="https://image.freepik.com/free-vector/diversity-childhood-concept_74855-7176.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -145,7 +145,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/volunteers-helping-disabled-friends-outdoor-walking_74855-7933.jpg"
+                                image="https://image.freepik.com/free-vector/flat-design-people-with-disability-room_52683-48841.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -166,7 +166,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/online-language-class-illustration_1284-64727.jpg"
+                                image="https://image.freepik.com/free-vector/happy-women-learning-language-online-isolated-flat-vector-illustration-cartoon-female-characters-taking-individual-lessons-through-messenger-education-digital-technology-concept_74855-10088.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -208,7 +208,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/student-centered-education-knowledge-gaining-remote-graduation_335657-3309.jpg"
+                                image="https://image.freepik.com/free-vector/students-watching-webinar-computer-studying-online_74855-15522.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -265,7 +265,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/queue-immigrants-standing-holding-luggage-waiting-departure-airport-group-tourists-with-globe-map-pointers-destination-line-background-travel-immigration-concept_74855-10142.jpg"
+                                image="https://image.freepik.com/free-vector/international-migration-abstract-concept-vector-illustration-international-migrants-border-control-movement-people-leaving-country-application-form-travel-with-bag-abstract-metaphor_335657-3972.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -284,7 +284,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/office-concept-illustration_114360-1248.jpg"
+                                image="https://image.freepik.com/free-vector/coach-speaking-before-audience-mentor-presenting-charts-reports-employees-meeting-business-training-seminar-conference-vector-illustration-presentation-lecture-education_74855-8294.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -303,7 +303,7 @@ export const ContactTypeList = (props) => {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://image.freepik.com/free-vector/accountability-abstract-concept_335657-3017.jpg"
+                                image="https://image.freepik.com/free-vector/lawyer-concept-illustration_114360-4122.jpg"
                                 alt="green iguana"
                             />
                             <CardContent>
@@ -437,7 +437,7 @@ export const ContactTypeList = (props) => {
                                 component="img"
                                 height="200"
                                 image="https://image.freepik.com/free-vector/pensioners-pastime-senior-home-aged-couple-playing-chess-activities-seniors-elderly-active-lifestyle-older-people-time-spending-concept-pinkish-coral-bluevector-isolated-illustration_335657-1499.jpg"
-                                alt="green iguana"
+                                alt=""
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
@@ -509,12 +509,12 @@ export const ContactTypeList = (props) => {
                     <div className="card">
 
                         <Card sx={{ maxWidth: 345 }}>
-                            {/* <CardMedia
+                            <CardMedia
                                 component="img"
                                 height="200"
-                                image="https://media.istockphoto.com/vectors/kindergarten-teacher-walking-with-kids-vector-id1217089640?k=20&m=1217089640&s=612x612&w=0&h=5KrXh3uSbLTyppT6VVFQZlI9sCurXpX9ZTb2DtS3uJw="
+                                image="https://image.freepik.com/free-vector/passengers-waiting-bus-city-queue-town-road-flat-vector-illustration-public-transport-urban-lifestyle_74855-8493.jpg"
                                 alt="green iguana"
-                            /> */}
+                            />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     <Link className="link" to='/community_resources/Transportation Services'>
@@ -528,6 +528,33 @@ export const ContactTypeList = (props) => {
 
 
                 </div>
+                <footer>
+                    <p>
+                        Children's Services: <a href="https://www.freepik.com/vectors/party">Party vector created by pch.vector - www.freepik.com</a>
+                        Childcare: <a href="https://www.freepik.com/vectors/school">School vector created by pch.vector - www.freepik.com</a>
+                        Christmas: <a href="https://www.freepik.com/vectors/christmas">Christmas vector created by rawpixel.com - www.freepik.com</a>
+                        Clothing: <a href="https://www.freepik.com/vectors/clothes">Clothes vector created by freepik - www.freepik.com</a>
+                        Counseling: <a href="https://www.freepik.com/vectors/infographic">Infographic vector created by pch.vector - www.freepik.com</a>
+                        Crisis Resources: <a href="https://www.freepik.com/vectors/woman">Woman vector created by pch.vector - www.freepik.com</a>
+                        Disability: <a href="https://www.freepik.com/vectors/people">People vector created by pikisuperstar - www.freepik.com</a>
+                        ESL Classes: <a href="https://www.freepik.com/vectors/school">School vector created by pch.vector - www.freepik.com</a>
+                        Food: <a href="https://www.freepik.com/vectors/background">Background vector created by pikisuperstar - www.freepik.com</a>
+                        GED/Education: <a href="https://www.freepik.com/vectors/school">School vector created by pch.vector - www.freepik.com</a>
+                        Health Insurance: <a href="https://www.freepik.com/vectors/background">Background vector created by rawpixel.com - www.freepik.com</a>
+                        Housing: <a href="https://www.freepik.com/vectors/people">People vector created by pch.vector - www.freepik.com</a>
+                        Immigrant/refugee: <a href="https://www.freepik.com/vectors/car">Car vector created by vectorjuice - www.freepik.com</a>
+                        Job Training: <a href="https://www.freepik.com/vectors/business">Business vector created by pch.vector - www.freepik.com</a>
+                        Legal Assistance: <a href="https://www.freepik.com/vectors/woman">Woman vector created by stories - www.freepik.com</a>
+                        Medical: <a href="https://www.freepik.com/vectors/medical">Medical vector created by stories - www.freepik.com</a>
+                        Men's Resources: <a href="https://www.freepik.com/vectors/background">Background vector created by pikisuperstar - www.freepik.com</a>
+                        Phone: <a href="https://www.freepik.com/vectors/technology">Technology vector created by pch.vector - www.freepik.com</a>
+                        Pets: <a href="https://www.freepik.com/vectors/people">People vector created by pch.vector - www.freepik.com</a>
+                        Rehab: <a href="https://www.freepik.com/vectors/health">Health vector created by freepik - www.freepik.com</a>
+                        Rent, Mortgage, Utilities: <a href="https://www.freepik.com/vectors/cartoon">Cartoon vector created by vectorjuice - www.freepik.com</a>
+                        Senior/disabled housing: <a href="https://www.freepik.com/vectors/character">Character vector created by vectorjuice - www.freepik.com</a>
+                        Transportation: <a href="https://www.freepik.com/vectors/car">Car vector created by pch.vector - www.freepik.com</a>
+                    </p>
+                </footer>
 
 
             </div>
