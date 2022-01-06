@@ -11,7 +11,7 @@ export const ApplicationViews = () => {
     return (
         <>
             <Route exact path='/'>
-                <ContactTypeList />
+                <ContactTypeWithSearch/>
             </Route>
             <Route exact path='/community_resources/:contactType'>
                 <CommunityResourceList />
