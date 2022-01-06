@@ -1,3 +1,4 @@
+import "./CommunityResource.css"
 export const Search = ({ updateSearchState }) => { // from ArtistDatesView use effect, modifies searchTerm
 
     return (

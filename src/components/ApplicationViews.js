@@ -6,6 +6,7 @@ import { CommunityResourceDetail } from "./communityResources/CommunityResourceD
 import { ReviewList } from "./reviews/ReviewList"
 import { ReviewForm } from "./reviews/ReviewForm"
 import { Profile } from "./reviewers/Profile"
+import { ContactTypeWithSearch } from "./communityResources/SearchViews"
 
 export const ApplicationViews = () => {
     return (
