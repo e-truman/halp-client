@@ -63,7 +63,7 @@ export const SearchList = ({ searchState }) => {
                 }}
             >
                 {searchResults.map((searchResult) => ( 
-                    <option  key={searchResult.id} onClick={() => history.push("/")} value={searchResult.id}>
+                    <option  onClick={() => history.push(`/community_resource/${searchResult.id}`)} value={searchResult.id}>
                         {searchResult.contact}
                     </option>
                 ))}
