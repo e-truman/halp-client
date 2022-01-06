@@ -99,15 +99,17 @@ h2 {
 .search-results {
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
+  /* border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
-  padding:.5em;
+  padding:.5em; */
     
 }
 
 .no-style {
     background-color: transparent;
     padding: 0;
+    border: white;
+    border-radius: 0rem;
 }
 
 .search-results-container {
