@@ -46,6 +46,10 @@ export const CommunityResourceDetail = (props) => {
                                                 <p>{communityResource.street_address}</p>
                                         </Typography>
                                     </CardContent>
+                                    <CardActions>
+                                            <Button size="small"><Link className="link" to={`reviews/${communityResource.id}`}>See Reviews</Link></Button>
+                                            <Button size="small"><Link className="link" to={`/write_review/${communityResource.id}`}>Wite a Review</Link></Button>
+                                        </CardActions>
                                 </Card>
 
 
