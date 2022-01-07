@@ -28,7 +28,12 @@ export const CommunityResourceList = (props) => {
     }, [])
 
 
-
+const communityResourceName = () => {
+   communityResources.map((communityResource)=>{
+        return<h2>{communityResource.contact_type}</h2>
+       
+    })
+}
 
 
 
@@ -36,7 +41,7 @@ export const CommunityResourceList = (props) => {
         <>
 
             <div className="card_container">
-                <h2 className="title">{contactType}</h2>
+            <div className="title">{communityResources.find(communityResourceName)}</div>
                 <div className="resource_cards">
                     {
                         communityResources.map((communityResource) => {
