@@ -28,7 +28,7 @@ import logo from './halpLogo.png';
 const pages = [
 <Link className="link" to="/write_review">Write a Review</Link>, 
 <Link className="link" to={`/my_reviews`}>Your Reviews</Link>];
-const settings = [<Link className="link" to="my_profile">Profile</Link>, 'Logout'];
+// const settings = [<Link className="link" to={`/my_profile`}>Profile</Link>, 'Logout'];
 
 
 
@@ -200,7 +200,7 @@ export const Navbar = () => {
                             >
                                 
                                     <MenuItem  onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center"><Link className="link" to="my_profile">Profile</Link></Typography>
+                                        <Typography textAlign="center"><Link className="link" to="/my_profile">Profile</Link></Typography>
                                     </MenuItem>
                                     <MenuItem  onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">
@@ -225,8 +225,7 @@ export const Navbar = () => {
                                             }
                                     </Typography>
                                 </MenuItem>
-                                    
-                              
+                                     
                             </Menu>
                         </Box>
                     </Toolbar>
