@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, Link, useParams } from "react-router-dom"
 import { getMyProfile, deleteProfile, updateProfile, getReviewerById } from "./ReviewerManager";
+import "./Profile.css"
 
 export const Profile = (props) => {
     console.log(props)
     const history = useHistory()
-    const [reviewer, setReviewer] = useState({})
+    const [profile, setReviewer] = useState({})
     // const [showComments, setShowComments ] = useState(false)
     const { reviewerId } = useParams()
     const otherProfileMode = reviewerId ? true : false
@@ -31,56 +32,34 @@ export const Profile = (props) => {
         deleteProfile(id, func)
     }
 
-//     const logout = () => {
-//         {
-//             (localStorage.getItem("halp_user_id") !== null) ?
-
-//                 localStorage.removeItem("halp_user_id")
-//                         history.push({ pathname: "/" })
-                  
-    
-//                 :
-// <>
-//     <li className="nav-item">
-//         <Link className="nav-link" to="/login">Login</Link>
-//     </li>
-//     <li className="nav-item">
-//         <Link className="nav-link" to="/register">Register</Link>
-//     </li>
-// </>
-//         }
-//     }
 
 
 
 return (
     <>
 
-        <h2 className="title">{reviewer.user?.first_name} {reviewer?.user?.last_name}</h2>
-        <p>Username: {reviewer.user?.username} </p>
-        <div className="allReviews">
+        <h2 className="title">{profile?.reviewer?.user?.username}</h2>
+       
 
 
-
-
-            <div className="space-between">
+            <div className="profile">
                 <p></p>
-                <img src={reviewer.profile_pic} alt="profile picture" />
-                <p>Username: {reviewer.user?.username} </p>
-                <p>Email: {reviewer.user?.email} </p>
+                <img className="profile-pic" src={profile?.reviewer?.profile_pic} alt="profile picture" />
+                <p>Username: {profile?.reviewer?.user?.username} </p>
+                <p>Email: {profile.reviewer?.user?.email} </p>
                 {/* <p>Date: {review.publication_date}</p> */}
                 {/* <p>{review.content}</p> */}
 
                 <div className="buttons">
                     {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
-                    <button className="btn" value={reviewer.id} >
+                    <button className="btn" value={profile?.reviewer?.user?.id} >
                         
                         {
                             (localStorage.getItem("halp_user_id") !== null) ?
 
                                 <p className="link"
                                     onClick={() => {
-                                        handleDelete(reviewer.id, fetchReviewer)
+                                        handleDelete(profile.reviewer.id, fetchReviewer)
                                         localStorage.removeItem("halp_user_id")
                                         history.push({ pathname: "/" })
                                     }}
@@ -98,8 +77,51 @@ return (
                         </button>
 
                 </div>
-            </div>
 
+                <h2 className="title">My Reviews</h2>
+                
+            
+                <div className="allReviews">
+
+
+
+                 {
+    profile.reviews.map((review) => {
+            return <>
+                <div className="space-between">
+                    <h4 className="mp-title" key={`review--${review.id}`}><Link to={`/reviews/${review.id}`}>Title: {review.title}</Link></h4>
+                    <p>Author: {review.user?.first_name} {review?.reviewer?.user?.last_name}</p>
+                    {/* <p>Date: {review.publication_date}</p> */}
+                    <p>{review.content}</p>
+                    {/* <p>Category: {review.category?.label}</p> */}
+                    {/* <button onClick={() => history.push(`/commentForm/${review.id}`)}
+                        className='comment-btn'>Add Comment</button>  */}
+                    {/* { showComments ?
+                        <button onClick={() => toggleForm()}>Hide Comments</button>
+                        :
+                        <button onClick={() => toggleForm()}>Show Comments</button>
+                    }
+                    { showComments ?
+                        <ul>
+                            <h3>{review.comment.subject}</h3>
+                            <p>{review.comment.content}</p>
+                        </ul>
+                        : ""
+                    } */}
+                    <div className="buttons">
+                        {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
+                        {/* <button className="btn" value={review.id} onClick={() => { handleDelete(review.id, fetchMyReviews) }}>DELETE</button> */}
+
+                    </div>
+                </div>
+            </>
+        }
+    )
+
+}
+
+
+</div> 
 
 
 
@@ -110,3 +132,9 @@ return (
     </>
 )
 }
+
+
+
+
+
+

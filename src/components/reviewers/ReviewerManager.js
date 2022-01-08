@@ -1,5 +1,5 @@
 export const getMyProfile = () => {
-    return fetch("http://localhost:8000/reviewers", {
+    return fetch("http://localhost:8000/profile", {
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
         }
@@ -17,7 +17,7 @@ export const getReviewerById = (id) => {
 };
 
 export const deleteProfile = (id, func) => {
-    fetch(`http://localhost:8000/reviewers/${id}`, {
+    fetch(`http://localhost:8000/profile/${id}`, {
         method: "DELETE",
         headers:{
             "Authorization": `Token ${localStorage.getItem("halp_user_id")}`
@@ -28,7 +28,7 @@ export const deleteProfile = (id, func) => {
 
 
 export const updateProfile = (reviewer) => {
-    return fetch(`http://localhost:8000/reviewers/${reviewer.id}`,{
+    return fetch(`http://localhost:8000/profile/${reviewer.id}`,{
         method: "PUT",
         headers:{
             "Authorization": `token ${localStorage.getItem("halp_user_id")}`,
