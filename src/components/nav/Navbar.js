@@ -207,7 +207,7 @@ export const Navbar = () => {
                                     {
                                                 (localStorage.getItem("halp_user_id") !== null) ?
 
-                                                    <p className="nav-link fakeLink"
+                                                    <p className="link"
                                                         onClick={() => {
                                                             localStorage.removeItem("halp_user_id")
                                                             history.push({ pathname: "/" })

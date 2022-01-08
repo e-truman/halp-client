@@ -31,38 +31,82 @@ export const Profile = (props) => {
         deleteProfile(id, func)
     }
 
-    return (
-        <>
+//     const logout = () => {
+//         {
+//             (localStorage.getItem("halp_user_id") !== null) ?
 
-            <h2 className="title">{reviewer.user?.first_name} {reviewer?.user?.last_name}</h2>
-            <p>Username: {reviewer.user?.username} </p>
-            <div className="allReviews">
+//                 localStorage.removeItem("halp_user_id")
+//                         history.push({ pathname: "/" })
+                  
+    
+//                 :
+// <>
+//     <li className="nav-item">
+//         <Link className="nav-link" to="/login">Login</Link>
+//     </li>
+//     <li className="nav-item">
+//         <Link className="nav-link" to="/register">Register</Link>
+//     </li>
+// </>
+//         }
+//     }
+
+
+
+return (
+    <>
+
+        <h2 className="title">{reviewer.user?.first_name} {reviewer?.user?.last_name}</h2>
+        <p>Username: {reviewer.user?.username} </p>
+        <div className="allReviews">
 
 
 
 
-                <div className="space-between">
+            <div className="space-between">
                 <p></p>
                 <img src={reviewer.profile_pic} alt="profile picture" />
                 <p>Username: {reviewer.user?.username} </p>
                 <p>Email: {reviewer.user?.email} </p>
-                    {/* <p>Date: {review.publication_date}</p> */}
-                    {/* <p>{review.content}</p> */}
+                {/* <p>Date: {review.publication_date}</p> */}
+                {/* <p>{review.content}</p> */}
 
-                    <div className="buttons">
-                        {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
-                        <button className="btn" value={reviewer.id} onClick={() => { handleDelete(reviewer.id, fetchReviewer) }}>DELETE</button>
+                <div className="buttons">
+                    {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
+                    <button className="btn" value={reviewer.id} >
+                        
+                        {
+                            (localStorage.getItem("halp_user_id") !== null) ?
 
-                    </div>
+                                <p className="link"
+                                    onClick={() => {
+                                        handleDelete(reviewer.id, fetchReviewer)
+                                        localStorage.removeItem("halp_user_id")
+                                        history.push({ pathname: "/" })
+                                    }}
+                                >DELETE</p>
+                                :
+                                <>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/login">Login</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/register">Register</Link>
+                                    </li>
+                                </>
+                        }
+                        </button>
+
                 </div>
-
-
-
-
-
-
             </div>
 
-        </>
-    )
+
+
+
+
+
+        </div>
+
+    </>
+)
 }
