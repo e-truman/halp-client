@@ -20,25 +20,23 @@
 
 	.card_container{
 		width: 100%;
-		padding-right: 15px;
-		padding-left: 15px;
-		margin-right: auto;
-		margin-left: auto;
+		margin-right: 0 auto;
+		margin-left: 0 auto;
+        padding: 1em 2em 2em 2em;
 	}
 	
 
 	.contact_type_cards {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
-		padding: 3%;
+		justify-content: flex-start;
+		
 	}
 
     .resource_cards {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		/* padding: 5%; */
 	}
 
     .resource_card{
@@ -127,6 +125,7 @@ p {
 
 .homepage-title {
     font-weight: normal;
-    padding-left: 3em;
+    padding-left: .5em;
+    padding-bottom: 1em;
     font-size: 2em;
 }
