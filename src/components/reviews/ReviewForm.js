@@ -9,7 +9,7 @@ import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
 import { getCommunityResourceById } from "../communityResources/CommunityResourceManager";
 import TextField from '@mui/material/TextField';
-
+import Button from '@mui/material/Button';
 export const ReviewForm = () => {
     const [communityResource, setCommunityResource] = useState({})
     const { contactId, reviewId } = useParams()
@@ -237,13 +237,12 @@ export const ReviewForm = () => {
                         </div>
                     </fieldset>
 
-
-                    <button type="submit"
+                    <Button variant="contained" type="submit"
                         onClick={evt => {
                             evt.preventDefault()
                             constructNewReview()
                         }}
-                        className="btn btn-primary">{editMode ? "Save Updates" : "Create"}</button>
+                        className="btn btn-primary">{editMode ? "Save Updates" : "Create"}</Button>
                         </div>
                 </Card>
 
