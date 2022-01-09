@@ -37,13 +37,15 @@ export const CommunityResourceDetail = (props) => {
             <div className="contactTypes">
 
                             <div className="space-between">
-                                <Card>
+                                <Card className="contact-card">
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
-                                                <h2>{communityResource.contact}</h2>
-                                                <p>{communityResource.notes}</p>
+                                        <h3>{communityResource.contact}</h3 >
+                                                <div className="contact-info">
                                                 <p>{communityResource.phone_number}</p>
                                                 <p>{communityResource.street_address}</p>
+                                                <p style={{textTransform: 'capitalize'}}>{communityResource.notes}</p>
+                                                </div>
                                         </Typography>
                                     </CardContent>
                                     <CardActions>

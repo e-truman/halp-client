@@ -117,3 +117,11 @@ h2 {
     justify-content: flex-end;
     margin-right: 1%;
 }
+
+.contact-info{
+    font-size: .8em;
+}
+
+p {
+    margin: .5em;
+}

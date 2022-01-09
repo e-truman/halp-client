@@ -15,6 +15,7 @@ export const Register = (props) => {
     const verifyPassword = useRef()
     const passwordDialog = useRef()
     const history = useHistory()
+    const url = "https://halp-server.herokuapp.com/"
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -30,7 +31,7 @@ export const Register = (props) => {
                 "is_admin": true
             }
 
-            return fetch("http://localhost:8000/register", {
+            return fetch("https://halp-server.herokuapp.com/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

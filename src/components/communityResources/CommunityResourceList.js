@@ -35,6 +35,13 @@ const communityResourceName = () => {
     })
 }
 
+// function communityResourceName(contactType) {
+//     return contactType;
+//   }
+  
+//   function myFunction() {
+//     document.getElementById("demo").innerHTML = communityResource.find(communityResourceName);
+//   }
 
 
     return (
@@ -47,14 +54,16 @@ const communityResourceName = () => {
                         communityResources.map((communityResource) => {
                             return <>
                                 <div className="space-between resource_card">
-                                    <Card >
+                                    <Card className="contact-card">
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="div">
 
                                                 <h3>{communityResource.contact}</h3 >
+                                                <div className="contact-info">
                                                 <p>{communityResource.phone_number}</p>
                                                 <p>{communityResource.street_address}</p>
-                                                <p>{communityResource.notes}</p>
+                                                <p style={{textTransform: 'capitalize'}}>{communityResource.notes}</p>
+                                                </div>
 
                                             </Typography>
                                         </CardContent>
