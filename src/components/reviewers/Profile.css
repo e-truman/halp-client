@@ -16,7 +16,7 @@
 .profile-info {
     padding-left:1em;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    justify-content:center;
 }
 
 .profile-title {
@@ -40,6 +40,7 @@ padding-left: 3em;
     flex-wrap: wrap;
     padding: 1em;
     padding-top: 2em;
+    /* justify-content: center; */
 }
 
 .profile-item{

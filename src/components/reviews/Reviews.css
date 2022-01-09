@@ -1,7 +1,10 @@
 .card__container {
     width: 100%;
     margin-left: 2.5em;
+    
+    
 }
+
 
 .card{
     align-items: center;
@@ -17,11 +20,15 @@
     justify-content:flex-start;
     margin: auto;
     padding: auto;
+    /* justify-content: center; */
 }
 
 .title {
     /* padding-left: 1.5em; */
     font-size: 3em;
+   /* padding-left: 20%; */
+    
+    
 }
 
 .first-review {

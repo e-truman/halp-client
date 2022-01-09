@@ -16,44 +16,24 @@ export const Search = ({ updateSearchState }) => { // from ArtistDatesView use e
                     <Box
                         component="form"
                         sx={{
-                            '& > :not(style)': { m: 1, width: '50ch' },
+                            '& > :not(style)': { m: 1, width: '40ch' },
                         }}
                         noValidate
                         autoComplete="off"
                     >
-                        <TextField id="outlined-basic" label="Search for a community resource or category of service" variant="outlined" 
+                        <TextField id="outlined-basic" label="Search by organization or category of service" variant="outlined" 
                         onChange={
                             (evt) => {
                                 const search = evt.target.value
                                 updateSearchState(search)
                             }
                         }
-                        required autoFocus
                         />
                         
                     </Box>
 
 
 
-
-
-
-
-
-                    {/* <form className="form--search" onSubmit={(event) => { event.preventDefault() }}>
-                        <fieldset className="searchField">
-                            <input onChange={
-                                (evt) => {
-                                    const search = evt.target.value
-                                    updateSearchState(search)
-                                }
-                            }
-                                type="text"
-                                className="search"
-                                placeholder="SEARCH"
-                                required autoFocus />
-                        </fieldset>
-                    </form> */}
                 </section>
             </div>
         </>
