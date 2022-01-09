@@ -4,6 +4,7 @@ import { ApplicationViews } from "./ApplicationViews"
 import { Navbar } from "./nav/Navbar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
+import "./Halp.css"
 
 export const Halp = () => (
     <>

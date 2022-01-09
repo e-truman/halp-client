@@ -6,7 +6,7 @@ export const ProfileProvider = (props) => {
     const [profile, setProfile] = useState({events:[]})
 
     const getProfile = () => {
-        return fetch("https://halp-server.herokuapp.com/profile", {
+        return fetch("http://https://halp-server.herokuapp.com/profile", {
             headers: {
                 "Authorization": `Token ${localStorage.getItem("rare_user_id")}`
             }

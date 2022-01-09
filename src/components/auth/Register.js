@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 import { Link, useHistory } from "react-router-dom"
-import { HumanDate } from "../utils/HumanDate"
+// import { HumanDate } from "../utils/HumanDate"
 import "./Auth.css"
 
 export const Register = (props) => {
@@ -15,6 +15,7 @@ export const Register = (props) => {
     const verifyPassword = useRef()
     const passwordDialog = useRef()
     const history = useHistory()
+    const url = "https://halp-server.herokuapp.com/"
 
     const handleRegister = (e) => {
         e.preventDefault()

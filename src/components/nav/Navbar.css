@@ -7,8 +7,14 @@
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
-}
+} */
 
 .navbar__logo {
-    max-height: 6rem;
-} */
+    max-height: 4rem;
+} 
+
+.app__bar {
+    background-color: white;
+}
+
+

@@ -9,6 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EditIcon from '@mui/icons-material/Edit';
 
+
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 // import Typography from '@mui/material/Typography';
@@ -30,13 +31,14 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import "./Reviews.css"
 
 export const ReviewList = (props) => {
     console.log(props)
     const history = useHistory()
     const [reviews, setReviews] = useState([])
     // const [showComments, setShowComments ] = useState(false)
-    const { contactId } = useParams()
+    const { contactId, reviewerId } = useParams()
     const contactsMode = contactId ? true : false
     const [expanded, setExpanded] = React.useState(false);
     const [value, setValue] = React.useState(2);
@@ -105,105 +107,107 @@ export const ReviewList = (props) => {
     //     }
     // }
 
+
+
+
+
     return (
         <>
+            <div className="card__container">
 
-            <h2 className="title">{contactsMode ? "All Reviews" : "Your Reviews"}</h2>
-            <div className="allReviews">
+                <h2 className="title">{contactsMode ? "All Reviews" : "Your Reviews"}</h2>
+                <div className="review_cards">
+                    {reviews.length > 0 ?
 
-                {
-                    reviews.map((review) => {
-                        return <>
+                        reviews.map((review) => {
 
-
-
-
-                            <Card sx={{ maxWidth: 345 }}>
-                                <CardHeader
-                                    avatar={
-                                        <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                            {review?.reviewer?.user?.first_name[0]}
-                                        </Avatar>
-                                    }
-                                    // action={
-                                    //     <IconButton aria-label="settings">
-                                    //         <MoreVertIcon />
-                                    //     </IconButton>
-                                    // }
-                                    title={review?.community_resource?.contact}
-                                // subheader="September 14, 2016"
-                                />
-
-
-                                <CardContent>
-                                    <Typography variant="body2" color="text.secondary">
-                                        {review.title}
-                                    </Typography>
+                            return <>
+                                <div className="card">
+                                    <Card sx={{ maxWidth: 345 }}>
+                                        <CardHeader
+                                            avatar={
+                                                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                                                    <Link className="profile-link" to={`/profile/${review.reviewer.id}`}> {review?.reviewer?.user?.first_name[0]}</Link>
+                                                </Avatar>
+                                            }
+                                            // action={
+                                            //     <IconButton aria-label="settings">
+                                            //         <MoreVertIcon />
+                                            //     </IconButton>
+                                            // }
+                                            title={review?.community_resource?.contact}
+                                        // subheader="September 14, 2016"
+                                        />
+                                        <CardContent>
+                                            <Typography variant="body2" color="text.secondary">
+                                                {review.title}
+                                            </Typography>
 
 
-                                    <Box
-                                        sx={{
-                                            '& > legend': { mt: 2 },
-                                        }}
-                                    >
+                                            <Box
+                                                sx={{
+                                                    '& > legend': { mt: 2 },
+                                                }}
+                                            >
 
-                                        <Rating name="read-only" value={review.rating} readOnly />
+                                                <Rating name="read-only" value={review.rating} readOnly />
 
-                                    </Box>
+                                            </Box>
 
-                                    <Typography variant="body2" color="text.secondary">
-                                        {review.content}
-                                    </Typography>
+                                            <Typography variant="body2" color="text.secondary">
+                                                {review.content}
+                                            </Typography>
 
-                                </CardContent>
-                                <CardActions disableSpacing>
-
-                                        
-                                    {
-                                        review.current_user_reactions && review.current_user_reactions[0]?.is_liked
-                                            ? 
-                                                <IconButton aria-label="add to favorites" onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}>
-                                                    <FavoriteIcon />
-                                                </IconButton>
-                                           
-                                            : 
-                                                <IconButton aria-label="add to favorites" onClick={() => LikeReview(review.id, true).then(() => fetchReviews())}>
-                                                    <FavoriteBorderIcon />
-                                                </IconButton>
-    
-                                    }
+                                        </CardContent>
+                                        <CardActions disableSpacing>
 
 
-                                    {/* <IconButton aria-label="share">
-                                        <ShareIcon />
-                                    </IconButton> */}
-                                    {contactsMode === false ? buttons(review.id) : ""}
-                                     {/* <ExpandMore
-                                        expand={expanded}
-                                        onClick={handleExpandClick}
-                                        aria-expanded={expanded}
-                                        aria-label="show more"
-                                    >
-                                        <ExpandMoreIcon />
-                                    </ExpandMore> */}
-                                </CardActions>
-                                {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
-                                    <CardContent>
-                                        <Typography paragraph>
-                                            {review.content}
-                                        </Typography>
+                                            {
+                                                review.current_user_reactions && review.current_user_reactions[0]?.is_liked
+                                                    ?
+                                                    <IconButton aria-label="add to favorites" onClick={() => UnlikeReview(review.id, false).then(() => fetchReviews())}>
+                                                        <FavoriteIcon />
+                                                    </IconButton>
+                                                    :
+                                                    <IconButton aria-label="add to favorites" onClick={() => LikeReview(review.id, true).then(() => fetchReviews())}>
+                                                        <FavoriteBorderIcon />
+                                                    </IconButton>
 
-                                    </CardContent>
-                                </Collapse>  */}
-                            </Card>
+                                            }
 
 
-                        </>
-                    }
-                    )
+                                            {/* <IconButton aria-label="share">
+                    <ShareIcon />
+                </IconButton> */}
+                                            {contactsMode ? "" : buttons(review.id)}
+                                            {/* <ExpandMore
+                    expand={expanded}
+                    onClick={handleExpandClick}
+                    aria-expanded={expanded}
+                    aria-label="show more"
+                >
+                    <ExpandMoreIcon />
+                </ExpandMore> */}
+                                        </CardActions>
+                                        {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <CardContent>
+                    <Typography paragraph>
+                        {review.content}
+                    </Typography>
 
-                }
+                </CardContent>
+            </Collapse>  */}
+                                    </Card>
 
+                                </div>
+                            </>
+                        }
+                        )
+
+
+                        : <p className="first-review">Write the First Review</p>}
+
+                </div>
             </div>
 
         </>

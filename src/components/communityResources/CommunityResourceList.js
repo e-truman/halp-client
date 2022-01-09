@@ -8,6 +8,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import "./CommunityResource.css"
 
 export const CommunityResourceList = (props) => {
     console.log(props)
@@ -27,43 +28,58 @@ export const CommunityResourceList = (props) => {
     }, [])
 
 
+const communityResourceName = () => {
+   communityResources.map((communityResource)=>{
+        return<h2>{communityResource.contact_type}</h2>
+       
+    })
+}
 
-
+// function communityResourceName(contactType) {
+//     return contactType;
+//   }
+  
+//   function myFunction() {
+//     document.getElementById("demo").innerHTML = communityResource.find(communityResourceName);
+//   }
 
 
     return (
         <>
 
-            <h2 className="title">Community Resource By Category</h2>
-            <div className="contactTypes">
+            <div className="card_container">
+            <div className="title">{communityResources.find(communityResourceName)}</div>
+                <div className="resource_cards">
+                    {
+                        communityResources.map((communityResource) => {
+                            return <>
+                                <div className="space-between resource_card">
+                                    <Card className="contact-card">
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="div">
 
-                {
-                    communityResources.map((communityResource) => {
-                        return <>
-                            <div className="space-between">
-                                <Card>
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            
                                                 <h3>{communityResource.contact}</h3 >
+                                                <div className="contact-info">
                                                 <p>{communityResource.phone_number}</p>
                                                 <p>{communityResource.street_address}</p>
-                                    
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-        <Button size="small"><Link to={`reviews/${communityResource.id}`}>See Reviews</Link></Button>
-        <Button size="small"><Link to={`/write_review/${communityResource.id}`}>Wite a Review</Link></Button>
-      </CardActions>
-                                </Card>
+                                                <p style={{textTransform: 'capitalize'}}>{communityResource.notes}</p>
+                                                </div>
 
-                            </div>
-                        </>
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions>
+                                            <Button size="small"><Link className="link" to={`reviews/${communityResource.id}`}>See Reviews</Link></Button>
+                                            <Button size="small"><Link className="link" to={`/write_review/${communityResource.id}`}>Wite a Review</Link></Button>
+                                        </CardActions>
+                                    </Card>
+
+                                </div>
+                            </>
+                        }
+                        )
+
                     }
-                    )
-
-                }
-
+                </div>
             </div>
 
         </>

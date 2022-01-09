@@ -1,0 +1,43 @@
+.card__container {
+    width: 100%;
+    margin-left: 2.5em;
+}
+
+.card{
+    align-items: center;
+    word-wrap: break-word;
+    padding: 1em;
+    width: 25em;
+    height: 25%;
+}
+
+.review_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    margin: auto;
+    padding: auto;
+}
+
+.title {
+    /* padding-left: 1.5em; */
+    font-size: 3em;
+}
+
+.first-review {
+    padding-left: 2em;
+    font-size: 2em;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+}
+
+  
+  
+  .profile-link:hover {
+    color:rgb(132, 112, 245); 
+    background-color: transparent;
+  }
