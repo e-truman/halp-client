@@ -14,7 +14,7 @@ export const ContactTypeList = (props) => {
         <>
             <div className="card_container">
 
-
+<h2 className="homepage-title">Find Community Resources By Category</h2>
                 <div className="contact_type_cards">
 
                     <div className="card">

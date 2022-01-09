@@ -8,7 +8,7 @@ import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EditIcon from '@mui/icons-material/Edit';
-
+import Button from '@mui/material/Button';
 
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
@@ -150,7 +150,7 @@ export const ReviewList = (props) => {
                                                 }}
                                             >
 
-                                                <Rating name="read-only" value={review.rating} readOnly />
+                                                <Rating name="read-only" precision={0.5} value={review.rating} readOnly />
 
                                             </Box>
 
@@ -209,6 +209,7 @@ export const ReviewList = (props) => {
 
                 </div>
             </div>
+
 
         </>
     )

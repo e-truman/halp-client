@@ -93,6 +93,9 @@ h2 {
   display: flex;
   justify-content:flex-end;
   padding-bottom: 0;
+  padding-right: 5%;
+  padding-top: 2em;
+  flex-shrink: calc();
 }
 
 .search-results {
@@ -123,4 +126,10 @@ h2 {
 
 p {
     margin: .5em;
+}
+
+.homepage-title {
+    font-weight: normal;
+    padding-left: 3em;
+    font-size: 2em;
 }
