@@ -38,10 +38,7 @@ export const ReviewForm = () => {
             .then(data => setCommunityResource(data))
     }
 
-    // useEffect(() => {
-    //     fetchCommunityResources()
-
-    // }, [])
+    
 
     useEffect(() => {
         if (editMode) {
