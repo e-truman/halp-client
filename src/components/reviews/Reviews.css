@@ -48,3 +48,27 @@
     color:rgb(132, 112, 245); 
     background-color: transparent;
   }
+
+  .form-group {
+      display: block;
+  }
+
+  .review-form{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+   
+  }
+
+  .review-form-with-title {
+    
+    padding:3em;
+  }
+
+  .review-form-title {
+      padding-bottom: 1em;
+  }
+
+  .space-around {
+      padding: 1em;
+  }

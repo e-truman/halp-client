@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react"
 import { createReview, updateReview, getReviewById } from "./ReviewManager"
 import { useParams, useHistory } from 'react-router-dom'
-// import * as React from 'react';
+import Card from '@mui/material/Card';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
 import { getCommunityResourceById } from "../communityResources/CommunityResourceManager";
-
+import TextField from '@mui/material/TextField';
 
 export const ReviewForm = () => {
     const [communityResource, setCommunityResource] = useState({})
     const { contactId, reviewId } = useParams()
     const [review, setReview] = useState({
-        rating:0
+        rating: 0
     })
     const history = useHistory()
     const editMode = reviewId ? true : false  // true or false
@@ -62,10 +62,10 @@ export const ReviewForm = () => {
             }
             )
         }
-    else {
-        fetchCommunityResources()
+        else {
+            fetchCommunityResources()
 
-    }
+        }
 
 
         // getGameTypes().then(gameTypesData => setGameTypes(gameTypesData))
@@ -80,7 +80,7 @@ export const ReviewForm = () => {
     }
 
     const constructNewReview = () => {
-       
+
         if (editMode) {
             // PUT: 
             updateReview({
@@ -111,14 +111,17 @@ export const ReviewForm = () => {
     }
 
     return (
-        <form className="gameForm">
-            <h2 className="gameForm__title">{editMode ? "Edit Review" : "Write a Review"}</h2>
+        <form className="review-form-with-title">
+
+            <div className="review-form">
+
+                <Card sx={{ maxWidth: 600 }}>
+                    <div className="space-around">
+            <h2 className="review-form-title">{editMode ? "Edit Review" : "Write a Review"}</h2>
+                    <h3> {editMode ? `${review?.communityResource?.contact}` : `${communityResource.contact}`}</h3>
 
 
-            <h3> {editMode ? `${review?.communityResource?.contact}` : `${communityResource.contact}`}</h3>
-
-
-            {/* <option value="0">Select a Game</option>
+                    {/* <option value="0">Select a Game</option>
                         {
                             games?.map(g => (
                                 g.id == event.gameId ? <option selected key={g.id} value={g.id}>
@@ -130,61 +133,121 @@ export const ReviewForm = () => {
 
 
 
-            <Box
-                sx={{
-                    width: 200,
-                    display: 'flex',
-                    alignItems: 'center',
-                }}
-            >
-                
-                <Rating
-                    name='rating'
-                    value={review.rating}
-                    precision={0.5}
-                    onChange={handleControlledInputChange} 
-                    onChangeActive={(event, newHover) => {
-                        setHover(newHover);
-                    }}
-                    emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-                />
-                {value !== null && (
-                    <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-                )}
-            </Box>
+                    <Box
+                        sx={{
+                            width: 200,
+                            display: 'flex',
+                            alignItems: 'center',
+                        }}
+                    >
+
+                        <Rating
+                            name='rating'
+                            value={review.rating}
+                            required
+                            precision={0.5}
+                            onChange={handleControlledInputChange}
+                            onChangeActive={(event, newHover) => {
+                                setHover(newHover);
+                                setValue(review.rating)
+                            }}
+                            emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                        />
+                        {value !== null && (
+                            <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : review.rating]}</Box>
+                        )}
+                    </Box>
 
 
 
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="title">Title: </label>
-                    <input type="text" name="title" required autoFocus className="form-control"
+                    <fieldset>
+                        <div className="form-group">
+                            <label htmlFor="title">Title: </label>
+
+                            <Box
+                                sx={{
+                                    width: 500,
+                                    maxWidth: '100%',
+                                }}
+                            >
+                                <TextField
+                                fullWidth
+                                    id="outlined-multiline-flexible"
+                                    required
+                                    multiline
+                                    sx={{
+                                        '& > :not(style)': {  width: '100%' },
+                                    }}
+                                    maxRows={1}
+                                    name="title"
+                                    value={review.title}
+                                    onChange={handleControlledInputChange}
+                                />
+                            </Box>
+
+
+
+                            {/* <input type="text" name="title" required autoFocus className="form-control"
                         value={review.title}
                         onChange={handleControlledInputChange}
-                    />
-                </div>
-            </fieldset>
+                    /> */}
+
+
+                        </div>
+                    </fieldset>
 
 
 
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="content">Review: </label>
+                    <fieldset>
+
+
+
+
+                        <div className="form-group">
+                            <label htmlFor="content">Review: </label>
+                            <Box
+                                sx={{
+                                    width: 500,
+                                    maxWidth: '100%',
+                                }}
+                            >
+
+                            <TextField
+                                id="outlined-multiline-flexible"
+                                fullWidth
+                                required
+                                multiline
+                                maxRows={10}
+                                sx={{
+                                    '& > :not(style)': {width: '100%' },
+                                }}
+                                value={review.content}
+                                name="content"
+                                onChange={handleControlledInputChange}
+                            />
+                            </Box>
+
+
+                            {/* 
                     <input type="textarea" name="content" required className="form-control"
                         value={review.content}
                         // defaultValue={game.title}
                         onChange={handleControlledInputChange}
-                    />
-                </div>
-            </fieldset>
+                    /> */}
+                        </div>
+                    </fieldset>
 
 
-            <button type="submit"
-                onClick={evt => {
-                    evt.preventDefault()
-                    constructNewReview()
-                }}
-                className="btn btn-primary">{editMode ? "Save Updates" : "Create"}</button>
+                    <button type="submit"
+                        onClick={evt => {
+                            evt.preventDefault()
+                            constructNewReview()
+                        }}
+                        className="btn btn-primary">{editMode ? "Save Updates" : "Create"}</button>
+                        </div>
+                </Card>
+
+            </div>
         </form>
     )
 }

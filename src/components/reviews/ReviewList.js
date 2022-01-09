@@ -150,7 +150,7 @@ export const ReviewList = (props) => {
                                                 }}
                                             >
 
-                                                <Rating name="read-only" value={review.rating} readOnly />
+                                                <Rating name="read-only" precision={0.5} value={review.rating} readOnly />
 
                                             </Box>
 
