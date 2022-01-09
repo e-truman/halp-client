@@ -113,16 +113,11 @@ export const ReviewList = (props) => {
 
     return (
         <>
-            <h2 className="title">{contactsMode ? "All Reviews" : "Your Reviews"}</h2>
             <div className="card__container">
+
+                <h2 className="title">{contactsMode ? "All Reviews" : "Your Reviews"}</h2>
                 <div className="review_cards">
                     {reviews.length > 0 ?
-
-
-
-
-
-
 
                         reviews.map((review) => {
 
@@ -210,7 +205,7 @@ export const ReviewList = (props) => {
                         )
 
 
-                        : "Write the First Review"}
+                        : <p className="first-review">Write the First Review</p>}
 
                 </div>
             </div>

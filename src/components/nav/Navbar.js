@@ -107,7 +107,7 @@ export const Navbar = () => {
     return (
 
         <>
-            <AppBar style={{ background: 'lightblue'}} elevation={0} position="static">
+            <AppBar style={{ background: 'white'}} elevation={0} position="static">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography

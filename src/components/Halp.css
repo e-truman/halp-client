@@ -1,3 +1,4 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,900;1,300&display=swap'); */
 /* .App {
   text-align: center;
 }
@@ -47,3 +48,9 @@
   color:rgb(132, 112, 245); 
   background-color: transparent;
 }
+
+/* .title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+} */
+

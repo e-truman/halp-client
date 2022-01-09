@@ -1,12 +1,7 @@
 .card__container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 2.5em;
 }
-
-
-
-
 
 .card{
     align-items: center;
@@ -16,20 +11,20 @@
     height: 25%;
 }
 
-
-
-
-
-
-
-
 .review_cards {
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;
+    margin: auto;
+    padding: auto;
 }
 
 .title {
-    padding-left: 1.5em;
+    /* padding-left: 1.5em; */
     font-size: 3em;
+}
+
+.first-review {
+    padding-left: 2em;
+    font-size: 2em;
 }

@@ -37,3 +37,12 @@ export const updateProfile = (reviewer) => {
         body: JSON.stringify(reviewer)
     })
 }
+
+export const date = (createdOn) => {
+    let humanDate = new Date(createdOn);
+    let dd = String(humanDate.getDate()).padStart(2, '0');
+    let mm = String(humanDate.getMonth() + 1).padStart(2, '0');
+    let yyyy = humanDate.getFullYear();
+    humanDate = `${mm}/${dd}/${yyyy}`;
+    return humanDate
+}

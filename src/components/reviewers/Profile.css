@@ -1,9 +1,54 @@
 .profile-pic {
     width: 20em;
     border-radius: 50%;
+    padding-left: 1em;
+    /* flex-wrap: wrap;
+    justify-content:flex-start; */
     
 }
 
-.profile {
+/* .profile {
     padding-left: 4em;
+    padding-top: 2em;
+    display: flex;
+} */
+
+.profile-info {
+    padding-left:1em;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+/* .profile-title {
+    font-size: 3em;
+} */
+
+/* .info-container {
+    display:flex;
+padding-left: 3em;
+} */
+
+
+
+.profile {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.profile-item{
+    /* align-items: center; */
+    word-wrap: break-word;
+    justify-content:flex-start;
+    padding: 2.5em;
+}
+
+.profile-items {
+    display: flex;
+    flex-wrap: wrap;
+   content:flex-start; 
+    /* margin: auto;
+    padding: auto; */
 }

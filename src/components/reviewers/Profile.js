@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, Link, useParams } from "react-router-dom"
-import { getMyProfile, deleteProfile, updateProfile, getReviewerById } from "./ReviewerManager";
+import { getMyProfile, deleteProfile, updateProfile, getReviewerById, date } from "./ReviewerManager";
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -16,6 +16,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import DeleteIcon from '@mui/icons-material/Delete';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import EditIcon from '@mui/icons-material/Edit';
 import "./Profile.css"
 
 export const Profile = (props) => {
@@ -50,22 +53,36 @@ export const Profile = (props) => {
 
 
 
+
     return (
         <>
 
-            
+
 
 
 
             <div className="profile">
-                
-                <img className="profile-pic" src={profile?.profile_pic} alt="profile picture" />
-               
-                {/* <p>Date: {review.publication_date}</p> */}
-                {/* <p>{review.content}</p> */}
+                {/* <div info-container> */}
 
-                <div className="buttons">
-                    {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
+                <div className="profile-items">
+
+                    <img className="profile-pic profile-item" src={profile?.profile_pic} alt="profile picture" />
+
+                    {/* <p>Date: {review.publication_date}</p> */}
+                    {/* <p>{review.content}</p> */}
+
+                    <div className="buttons">
+                        {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
+
+                    </div>
+
+                </div>
+                <div className="profile-info profile-item">
+
+                    <h2 className="profile-title">{profile?.user?.first_name} {profile?.user?.last_name}</h2>
+                    <p>Username: {profile?.user?.username} </p>
+                    <p>Email: {profile.user?.email} </p>
+                    <p>User since: {date(profile.created_on)} </p>
                     <button className="btn" value={profile?.user?.id} >
 
                         {
@@ -77,7 +94,7 @@ export const Profile = (props) => {
                                         localStorage.removeItem("halp_user_id")
                                         history.push({ pathname: "/" })
                                     }}
-                                >DELETE</p>
+                                >DELETE ACCOUNT </p>
                                 :
                                 <>
                                     <li className="nav-item">
@@ -90,22 +107,15 @@ export const Profile = (props) => {
                         }
                     </button>
 
-                </div>
-                <div>
-
-                <h2 className="title">{profile?.user?.first_name} {profile?.user?.last_name}</h2>
-                <p>Username: {profile?.user?.username} </p>
-                <p>Email: {profile.user?.email} </p>
-
 
 
 
                 </div>
-
-
-
 
             </div>
+
+
+            {/* </div> */}
 
         </>
     )
