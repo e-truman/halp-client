@@ -28,3 +28,16 @@
     padding-left: 2em;
     font-size: 2em;
 }
+
+.profile-link {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+}
+
+  
+  
+  .profile-link:hover {
+    color:rgb(132, 112, 245); 
+    background-color: transparent;
+  }

@@ -19,16 +19,19 @@
     justify-content:flex-start;
 }
 
-/* .profile-title {
+.profile-title {
     font-size: 3em;
-} */
+}
 
 /* .info-container {
     display:flex;
 padding-left: 3em;
 } */
 
-
+.user-info {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
 
 .profile {
     width: 100%;
@@ -36,6 +39,7 @@ padding-left: 3em;
     display: flex;
     flex-wrap: wrap;
     padding: 1em;
+    padding-top: 2em;
 }
 
 .profile-item{

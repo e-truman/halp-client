@@ -127,7 +127,7 @@ export const ReviewList = (props) => {
                                         <CardHeader
                                             avatar={
                                                 <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                                    <Link className="link" to={`/profile/${review.reviewer.id}`}> {review?.reviewer?.user?.first_name[0]}</Link>
+                                                    <Link className="profile-link" to={`/profile/${review.reviewer.id}`}> {review?.reviewer?.user?.first_name[0]}</Link>
                                                 </Avatar>
                                             }
                                             // action={

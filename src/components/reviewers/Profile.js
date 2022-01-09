@@ -80,9 +80,9 @@ export const Profile = (props) => {
                 <div className="profile-info profile-item">
 
                     <h2 className="profile-title">{profile?.user?.first_name} {profile?.user?.last_name}</h2>
-                    <p>Username: {profile?.user?.username} </p>
-                    <p>Email: {profile.user?.email} </p>
-                    <p>User since: {date(profile.created_on)} </p>
+                    <p className="user-info">Username: {profile?.user?.username} </p>
+                    <p className="user-info">Email: {profile.user?.email} </p>
+                    <p className="user-info">User since: {date(profile.created_on)} </p>
                     <button className="btn" value={profile?.user?.id} >
 
                         {
