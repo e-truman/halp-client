@@ -34,7 +34,7 @@ const pages = [
 
 export const Navbar = () => {
     const history = useHistory()
-    const [reviewer, setReviewer] = useState({})
+    const [profile, setReviewer] = useState({})
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -179,7 +179,7 @@ export const Navbar = () => {
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt={reviewer.username} src={reviewer.profile_pic} />
+                                    <Avatar src={profile?.profile_pic} alt={profile?.user?.username} />
                                 </IconButton>
                             </Tooltip>
                             <Menu

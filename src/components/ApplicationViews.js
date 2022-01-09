@@ -7,6 +7,7 @@ import { ReviewList } from "./reviews/ReviewList"
 import { ReviewForm } from "./reviews/ReviewForm"
 import { Profile } from "./reviewers/Profile"
 import { ContactTypeWithSearch } from "./communityResources/SearchViews"
+import { ProfileViews } from "./reviewers/ProfileView"
 
 export const ApplicationViews = () => {
     return (
@@ -33,11 +34,12 @@ export const ApplicationViews = () => {
                 <ReviewForm />
             </Route>
             <Route exact path='/my_profile'>
-                <Profile />
+                <ProfileViews />
             </Route>
             <Route exact path='/profile/:reviewerId(\d+)'>
                 <Profile />
             </Route>
+
 
 
         </>

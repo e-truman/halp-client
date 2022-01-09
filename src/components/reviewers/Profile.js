@@ -1,6 +1,21 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, Link, useParams } from "react-router-dom"
 import { getMyProfile, deleteProfile, updateProfile, getReviewerById } from "./ReviewerManager";
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import "./Profile.css"
 
 export const Profile = (props) => {
@@ -35,25 +50,24 @@ export const Profile = (props) => {
 
 
 
-return (
-    <>
+    return (
+        <>
 
-        <h2 className="title">{profile?.reviewer?.user?.username}</h2>
-       
+            
+
 
 
             <div className="profile">
-                <p></p>
-                <img className="profile-pic" src={profile?.reviewer?.profile_pic} alt="profile picture" />
-                <p>Username: {profile?.reviewer?.user?.username} </p>
-                <p>Email: {profile.reviewer?.user?.email} </p>
+                
+                <img className="profile-pic" src={profile?.profile_pic} alt="profile picture" />
+               
                 {/* <p>Date: {review.publication_date}</p> */}
                 {/* <p>{review.content}</p> */}
 
                 <div className="buttons">
                     {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
-                    <button className="btn" value={profile?.reviewer?.user?.id} >
-                        
+                    <button className="btn" value={profile?.user?.id} >
+
                         {
                             (localStorage.getItem("halp_user_id") !== null) ?
 
@@ -74,63 +88,27 @@ return (
                                     </li>
                                 </>
                         }
-                        </button>
+                    </button>
+
+                </div>
+                <div>
+
+                <h2 className="title">{profile?.user?.first_name} {profile?.user?.last_name}</h2>
+                <p>Username: {profile?.user?.username} </p>
+                <p>Email: {profile.user?.email} </p>
+
+
+
 
                 </div>
 
-                <h2 className="title">My Reviews</h2>
-                
-            
-                <div className="allReviews">
 
 
 
-                 {
-    profile.reviews.map((review) => {
-            return <>
-                <div className="space-between">
-                    <h4 className="mp-title" key={`review--${review.id}`}><Link to={`/reviews/${review.id}`}>Title: {review.title}</Link></h4>
-                    <p>Author: {review.user?.first_name} {review?.reviewer?.user?.last_name}</p>
-                    {/* <p>Date: {review.publication_date}</p> */}
-                    <p>{review.content}</p>
-                    {/* <p>Category: {review.category?.label}</p> */}
-                    {/* <button onClick={() => history.push(`/commentForm/${review.id}`)}
-                        className='comment-btn'>Add Comment</button>  */}
-                    {/* { showComments ?
-                        <button onClick={() => toggleForm()}>Hide Comments</button>
-                        :
-                        <button onClick={() => toggleForm()}>Show Comments</button>
-                    }
-                    { showComments ?
-                        <ul>
-                            <h3>{review.comment.subject}</h3>
-                            <p>{review.comment.content}</p>
-                        </ul>
-                        : ""
-                    } */}
-                    <div className="buttons">
-                        {/* <button value={entry.id} onClick={() => { editEntry(entry.id) }}>EDIT</button> */}
-                        {/* <button className="btn" value={review.id} onClick={() => { handleDelete(review.id, fetchMyReviews) }}>DELETE</button> */}
+            </div>
 
-                    </div>
-                </div>
-            </>
-        }
+        </>
     )
-
-}
-
-
-</div> 
-
-
-
-
-
-        </div>
-
-    </>
-)
 }
 
 
