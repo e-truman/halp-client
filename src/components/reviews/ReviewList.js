@@ -107,13 +107,25 @@ export const ReviewList = (props) => {
     //     }
     // }
 
+
+
+
+
     return (
         <>
-            <div className="card__container">
             <h2 className="title">{contactsMode ? "All Reviews" : "Your Reviews"}</h2>
+            <div className="card__container">
                 <div className="review_cards">
-                    {
+                    {reviews.length > 0 ?
+
+
+
+
+
+
+
                         reviews.map((review) => {
+
                             return <>
                                 <div className="card">
                                     <Card sx={{ maxWidth: 345 }}>
@@ -170,26 +182,26 @@ export const ReviewList = (props) => {
 
 
                                             {/* <IconButton aria-label="share">
-                                        <ShareIcon />
-                                    </IconButton> */}
+                    <ShareIcon />
+                </IconButton> */}
                                             {contactsMode ? "" : buttons(review.id)}
                                             {/* <ExpandMore
-                                        expand={expanded}
-                                        onClick={handleExpandClick}
-                                        aria-expanded={expanded}
-                                        aria-label="show more"
-                                    >
-                                        <ExpandMoreIcon />
-                                    </ExpandMore> */}
+                    expand={expanded}
+                    onClick={handleExpandClick}
+                    aria-expanded={expanded}
+                    aria-label="show more"
+                >
+                    <ExpandMoreIcon />
+                </ExpandMore> */}
                                         </CardActions>
                                         {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
-                                    <CardContent>
-                                        <Typography paragraph>
-                                            {review.content}
-                                        </Typography>
+                <CardContent>
+                    <Typography paragraph>
+                        {review.content}
+                    </Typography>
 
-                                    </CardContent>
-                                </Collapse>  */}
+                </CardContent>
+            </Collapse>  */}
                                     </Card>
 
                                 </div>
@@ -197,7 +209,9 @@ export const ReviewList = (props) => {
                         }
                         )
 
-                    }
+
+                        : "Write the First Review"}
+
                 </div>
             </div>
 
