@@ -46,7 +46,7 @@ export const SearchList = ({ searchState }) => {
     )
 
     const searchDropdown = () => {
-        return <div>
+        return <div className="search-container">
         <FormControl sx={{ m: 1, minWidth: 120, maxWidth: 300 }}>
             <InputLabel shrink htmlFor="select-multiple-native">
                 {/* Native */}
