@@ -19,7 +19,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card className="link" sx={{ maxWidth: 345 }}>
+                        <Card className="link" sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -38,7 +38,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -59,7 +59,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -79,7 +79,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -99,7 +99,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -121,7 +121,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -141,7 +141,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -162,7 +162,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -183,7 +183,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -204,7 +204,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -223,7 +223,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -242,7 +242,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -261,7 +261,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -280,7 +280,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -298,7 +298,7 @@ export const ContactTypeList = (props) => {
                     </div>
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -316,7 +316,7 @@ export const ContactTypeList = (props) => {
                     </div>
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -335,7 +335,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -354,7 +354,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -373,7 +373,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -392,7 +392,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -411,7 +411,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -430,7 +430,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -449,7 +449,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -468,7 +468,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -487,7 +487,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -506,7 +506,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -525,7 +525,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
@@ -544,7 +544,7 @@ export const ContactTypeList = (props) => {
 
                     <div className="card">
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 325 }}>
                             <CardMedia
                                 component="img"
                                 height="200"
